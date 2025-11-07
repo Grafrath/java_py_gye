@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>while문</title>
+        <script>
+            var a = 27;
+            var i = 1;
+            var even = 0;
+            var odd = 0;
+
+            while (a>=i) {
+                if (i%2 == 0) {
+                    even += 1;
+                    i++;
+                } else {
+                    odd += 1;
+                    i++;
+                }
+            }
+            console.log("짝수는: ",even,"홀수는: ",odd);
+
+            var a = 3;
+
+            for (var i=1;i<10;i++) {
+                if (i%2==0) {
+                    continue;
+                } else {
+                    console.log(`${a} x ${i} = ${a*i}`);
+                }
+            }
+
+            var a = 9;
+            var cnt = 0;
+            var avv=0
+
+            for (var i = 1; i <= a; i++) {
+                    if (i % 3 === 0) {
+                        continue;
+                    } else {
+                        avv += i;
+                        cnt += 1;
+                    }
+                }
+            console.log("합계는:", avv, "평균은:", avv / cnt);
+
+            var num=123456789;
+            var rev=0;
+            var tem=0;
+
+            while (num > 0) {
+                tem = num%10;
+                rev = rev * 10 + tem;
+                num = parseInt(num/10);
+            }
+            console.log(rev);
+
+            var num = 496;
+            var cnt = 0;
+            
+            for (var i = 1;i < num;i++) {
+                if (num%i == 0) {
+                    cnt += i;
+                } else {
+                    continue;
+                }
+            }
+            
+            if (cnt == num) {
+                console.log("완전수 입니다.");
+            } else {
+                console.log("완전수가 아닙니다.");
+            }
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

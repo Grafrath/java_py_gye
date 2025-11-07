@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+    </head>
+
+    <body>
+        
+        <h2>자바스크립트 변수 키워드 예제</h2>
+        <script>
+            // var 키워드로 변수 선언
+            // var : 같은 이름의 변수가 만들어졌을 때를 감지하지 못한다.
+            var name = "홍길동";
+            console.log("var로 선언한 name:", name);
+            document.write("변수 name의 값: " + name + "<br>");
+
+            // let 키워드로 변수 선언
+            // let : 같은 이름의 변수가 만들어졌을 때를 감지한다 (mutable)
+            let age = 25;
+            console.log("let로 선언한 age:", age);
+            document.write("변수 age의 값: " + age + "<br>");
+
+            // const 키워드로 상수 선언
+            // const : 일종의 상수 (immutable) 값 재대입 불가
+            const pi = 3.14;
+            console.log("const로 선언한 pi:", pi);
+            document.write("상수 pi의 값: " + pi + "<br>");
+
+            // 변수 값 변경
+            name = "김철수";
+            age = 30;
+            console.log("변경된 name:", name);
+            document.write("변경된 name의 값: " + name + "<br>");
+            console.log("변경된 age:", age);
+            document.write("변경된 age의 값: " + age + "<br>");
+
+            // const 상수는 값  변경 불가 (아래 줄은 주석 처리해야 오류가 발생하지 않음)
+            // pi = 3.14159; 오류 발생
+            // 에러나면 화면에 안나옴
+            //자바스크립트에서 코드의 에러를 확인하려면 개발자 도구(F12) 콘솔 탭을 확인
+        </script>
+
+    </body>
+
+</html>

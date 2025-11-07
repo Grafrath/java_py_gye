@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+            // 비교 연산자의 기본 개념
+            //비교 연산자는 두 값을 비교하여 true 또는 false를 반환한다.
+
+            // 숫자 비교
+            let a = 10;
+            let b = 5;
+
+            let greater = a > b;   // true (10은 5보다 크다)
+            console.log(greater);
+            let less = a < b;      // false (10은 5보다 작지 않다)
+            console.log(less);
+            let equal = a == b;    // false (값이 다르다)
+            console.log(equal);
+            let notEqual = a != b; // true (값이 다르다)
+            console.log(notEqual);
+            let greaterOrEqual = a >= 10; // true
+            console.log(greaterOrEqual);
+            let lessOrEqual = b <= 5;     // true
+            console.log(lessOrEqual);
+
+            // == 와 === 의 차이 (형변환 비교)
+            // == : 값만 비교 (형변환이 일어남)
+            // === : 값과 자료형(type) 모두 비교 (형변환 없음)
+
+            let x = 5;
+            let y = "5";
+
+            let looseEqual = (x == y);   // true → 문자열 '5'가 숫자 5로 변환되어 비교됨
+            console.log(looseEqual);
+            let strictEqual = (x === y); // false → 자료형이 다르다 (number vs string)
+            console.log(strictEqual);
+            let looseNot = (x != y);     // false → 값은 같다고 판단
+            console.log(looseNot);
+            let strictNot = (x !== y);   // true  → 자료형이 다르기 때문에 다르다고 판단
+            console.log(strictNot);
+
+            // 문자열 비교
+            // 문자열은 유니코드 순서(사전순)로 비교된다.
+            let s1 = "apple";
+            let s2 = "banana";
+
+            let strCompare1 = s1 < s2;   // true ("apple"이 "banana"보다 앞에 있다)
+            console.log(strCompare1);
+            let strCompare2 = s1 > s2;   // false
+            console.log(strCompare2);
+            
+            // null, undefined 비교 주의
+            let n = null;
+            let u = undefined;
+
+            let nullEqUndef = (n == u);   // true (느슨한 비교에서는 같다)
+            console.log(nullEqUndef);
+            let nullStrict = (n === u);   // false (타입이 다르다)
+            console.log(nullStrict);
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

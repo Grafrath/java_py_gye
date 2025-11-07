@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexitems</title>
+        <style>
+            .container {
+                display: flex;
+                gap: 10px;
+                padding: 16px;
+                background: #f0f0f0;
+                width: max-content;
+            }
+            .item {
+                padding: 16px;
+                color: rgb(0, 0, 0);
+                border: 2px solid rgb(0, 0, 0);
+            }
+            .a {
+                order: 3;
+            }
+            .b {
+                order: 1;
+            }
+            .c {
+                order: 2;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="item a">1</div>
+            <div class="item b">2</div>
+            <div class="item c">3</div>
+        </div>
+    </body>
+
+</html>

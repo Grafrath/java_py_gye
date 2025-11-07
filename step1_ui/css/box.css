@@ -1,0 +1,41 @@
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed black;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.a {
+    background-color: purple;
+}
+
+.b {
+    background-color: violet;
+}
+
+.c {
+    background-color: navy;
+}
+
+.d {
+    background-color: teal;
+}
+
+.e {
+    background-color: olive;
+}
+
+.f {
+    background-color: maroon;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+            let a = true;
+            let b = false;
+            console.log();
+
+            let andResult = a && b; //false
+            console.log(andResult);
+            let orResult = a || b; //true
+            console.log(orResult);
+            let notResult = !a;     // false
+            console.log(notResult);
+
+            // 논리 연산자의 단축 평가 (Short-Circuit Evaluation)
+            // 좌항의 값만으로 결과가 확정되면 우항은 평가하지 않는다.
+
+            let left = true;
+            let right = false;
+
+            // AND: 앞이 false면 뒤는 실행 안 됨
+            let result1 = right && (left = false); // false
+            console.log(result1);
+            // OR: 앞이 true면 뒤는 실행 안 됨
+            let result2 = left || (right = true);  // true
+            console.log(result2);
+            // left와 right 값 확인 시 left=true, right=false 유지됨
+
+            // 피연산자가 불리언이 아닐 때
+            // 자바스크립트에서는 true/false 외의 값도 Truthy / Falsy 로 판단한다.
+            // false, 0, '', null, undefined, NaN 만 False, 나머지는 Truth
+
+            let x = 0;
+            let y = "Hello";
+
+            let result3 = x || y;   // 0은 falsy → y 반환 → "Hello"
+            console.log(result3);
+            let result4 = y && x;   // y는 truthy → x 반환 → 0
+            console.log(result4);
+
+            // 논리 연산자의 실제 활용 예시
+            // (1) 기본값 설정
+            let name;
+            let userName = name || "Guest"; // name이 falsy(undefined)이므로 "Guest" 대입
+
+            // (2) 조건이 true일 때 실행
+            let isLoggedIn = true;
+            isLoggedIn && (userName = "홍길동"); // true면 우항 실행 → userName = "홍길동"
+            console.log(userName);
+
+            // (3) 조건이 false일 때만 실행
+            let isAdmin = false;
+            !isAdmin && (userName = "일반 사용자"); // false → true가 되어 실행
+            console.log(userName);
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

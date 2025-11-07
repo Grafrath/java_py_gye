@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multiclass</title>
+        <style>
+            .btn {
+                padding: 10px 16px;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+            .primary {
+                background-color: blue;
+                color: white;
+            }
+            .danger {
+                background-color: red;
+                color: white;
+            }
+            .large {
+                font-size: 18px;
+                padding: 12px 18px;
+            }
+            .btn.primary{
+                border: 5px solid navy;
+            }
+            /* btn class and primary class 모두 보유시 적용*/
+            .btn.danger{
+                border: 5px solid darkred;
+            }
+            .btn .primary{
+                border: 5px solid black;
+            }
+            /* btn class 태그 안의 primary class 보유시 적용*/
+        </style>
+        </head>
+
+    <body>
+        <button class="btn primary">확인</button>
+        <button class="btn danger">삭제</button>
+        <buttotn class="btn primary large">확인(크게)</button>
+        </body>
+
+</html>

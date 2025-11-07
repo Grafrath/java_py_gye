@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+            // 증감 연산자의 기본 개념
+            // ++ : 1 증가
+            // -- : 1 감소
+            let a = 5;
+            a++;  // 후위 증가 → a = a + 1
+            let b = 5;
+            b--;  // 후위 감소 → b = b - 1
+            
+            // 후위 연산자(postfix)
+            // 변수 뒤에 붙으면, '사용한 다음에' 증가/감소가 일어남
+            let x = 10;
+            let result1 = x++;  // result1에는 10이 저장되고, x는 11이 된다
+
+            // 전위 연산자(prefix)
+            //변수 앞에 붙으면, '먼저' 증가/감소된 후 값이 사용됨
+            let y = 10;
+            let result2 = ++y;  // y가 먼저 11로 증가하고, result2에 11이 저장됨
+
+            // 감소 연산자 예시
+            let n = 3;
+            let postDec = n--;  // postDec = 3, n = 2
+            console.log(postDec, n);
+            let preDec = --n;   // n = 1, preDec = 1
+            console.log(preDec, n);
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

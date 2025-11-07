@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Structural Pseudo-Classes</title>
+        <style>
+            li:first-child {
+                font-weight: bold;
+                color: red;
+            }
+            li:nth-child(2) {
+                font-style: italic;
+                color: blue;
+            }
+            li:last-child {
+                text-decoration: underline;
+                color: green;
+            }
+            p:first-of-type {
+                color: purple;
+            }
+            p:nth-of-type(2) {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>구조 의사 클래스 예제</h2>
+        
+        <ul>
+            <li>첫 번째 항목</li>
+            <li>두 번째 항목</li>
+            <li>세 번째 항목</li>
+            <li>네 번째 항목</li>
+        </ul>
+        
+        <p>첫 번째 문단</p>
+        <p>두 번째 문단</p>
+    </body>
+    
+</html>

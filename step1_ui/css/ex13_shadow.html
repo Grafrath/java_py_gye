@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1.shadow{
+            color: #1b1b1b;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+        }
+        .title-glow{
+            color: white;
+            text-shadow: 
+            0 0 5px #00f,
+            0 0 15px rgb(43, 158, 129),
+            0 0 20px rgb(255, 102, 0);
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            background: white;
+            border: 1px solid black;
+        }
+        .shadow1{
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="shadow">shadow example</h1>
+    <h2 class="title-glow">multiple shadow</h2>
+    <div class="box shadow1"></div>
+</body>
+</html>

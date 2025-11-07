@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Array</title>
+        <script>
+            var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            var double = []
+
+            for (var i=0; i<number.length;i++) {
+                if ( i % 2 != 0) {
+                    double.push(number[i]*2);
+                } else {
+                    continue;
+                }
+            }
+
+            //메서드 체이닝 메서드를 점(.)으로 이어서 연속으로 실행하는 문법
+            const even = number.filter(x => x%2 == 0).map(n => n*2);
+            console.log(double);
+            console.log(even);
+
+            var number = [100, 98, 58, 71, 26, 50, 39, 45];
+            var ave = (number.reduce((n, x) => x+n))/number.length;
+            console.log(ave);
+
+            var sum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].reduce((n, x) => x + n);
+            console.log(sum);
+
+            var num = [1, 2, 2, 3, 4, 4, 5, 5, 5];
+            //var arr = num.filter(i => i != i+1 );
+            var arr = num.filter((value, index) => {
+                    return num.indexOf(value) === index;
+                })
+            console.log(arr);
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

@@ -1,0 +1,99 @@
+/* ========== 기본 설정 ========== */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
+  background: #F7F8FA;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; clip: rect(0 0 0 0); overflow: hidden; }
+
+/* 공통 레이아웃 */
+.container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+.section { padding: 32px 0; }
+h1, h2, h3 { margin: 0 0 12px; line-height: 1.3; }
+
+/* ========== 헤더 ========== */
+.header { background: #111827; border: 1px solid black; color: #fff; }
+.header_inner {                    /* ← 한 개 밑줄로 수정 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; }
+.nav_list {                        /* ← 한 개 밑줄로 수정 */
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.nav_list a { padding: 8px 10px; border-radius: 6px; }
+.nav_list a:hover { background: rgba(255,255,255,0.12); color: #E0E7FF; }
+
+/* ========== Welcome ========== */
+.welcome_inner {                   /* ← 한 개 밑줄로 수정 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ========== Menu ========== */
+.menu .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.menu-item {
+  flex: 0 1 32%;
+  min-width: 260px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item_body {                  /* ← 한 개 밑줄로 수정 */
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.price { font-weight: 700; }
+.desc { color: #6b7280; }
+
+/* 카드 호버 */
+.menu-item:hover { box-shadow: 0 10px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+
+/* ========== Location ========== */
+.location_inner {                  /* ← 한 개 밑줄로 수정 */
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ========== 푸터 ========== */
+.footer { background: #f3f4f6; }
+.footer_inner {                    /* ← 한 개 밑줄로 수정 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+}
+.footer .sns {
+  display: flex;
+  gap: 12px; list-style: none; margin: 0; padding: 0;
+}
+.footer .sns a { padding: 6px 8px; border-radius: 6px; }
+.footer .sns a:hover { background: rgba(0,0,0,0.06); }

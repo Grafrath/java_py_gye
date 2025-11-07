@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script>
+            var cal = {
+                add(a, b) {
+                    return a + b;
+                },
+                subtract(a, b) {
+                    return a - b;
+                },
+                multiply(a, b) {
+                    return a * b;
+                },
+                divide(a, b) {
+                    return b ? a / b : "0으론 나눌수 없습니다.";
+                }
+            }
+
+            console.log(cal.add(10,5))
+            console.log(cal.subtract(10, 5))
+            console.log(cal.multiply(10, 5))
+            console.log(cal.divide(10, 5))
+
+            console.log('-------------------');
+
+            var student = {
+                name:'홍길동',
+                scores:[],
+
+                score(scores) {
+                    this.scores.push(scores)
+                    console.log(this.scores);
+                },
+
+                ave() {
+                    return this.scores.reduce((a, b) => a + b, 0) / this.scores.length
+                },
+
+                total() {
+                    console.log(`이름은: ${this.name}, 평균점수는: ${this.ave()}`)
+                }
+
+            }
+            
+            student.score(95)
+            student.score(80)
+            student.score(65)
+            student.score(70)
+
+            student.ave()
+
+            student.total()
+
+            console.log('-------------------');
+
+            //상품을 담고 총합을 계산하는 cart 객체 작성하기
+            //프로퍼티
+            //items -> 빈배열
+
+            //기능
+            //상품 추가하기(이름과 가격)
+
+            //총 가격을 계산하여 반환하기
+
+            //담긴 상품 목록(이름-가격) 출력하고 총가격 출력하기
+
+            var cart = {
+                items: {},
+
+                add(key, value) {
+                    this.items[key] = value;
+                    return this;
+                },
+
+                sum() {
+                    return Object.values(this.items).reduce((a, b) => a + b, 0);
+                },
+
+                printItems() {
+                    console.log('=== 장바구니 목록 ===');
+                    for (let [name, price] of Object.entries(this.items)) {
+                        console.log(`${name}: ${price}원`);
+                    }
+                    console.log('==================');
+                    console.log(`총 가격: ${this.sum()}원`);
+                }
+            }
+
+            cart.add("콜라", 2000)
+                .add("펩시", 1800)
+                .add("빼빼로", 1500)
+                .add("사탕", 500);
+
+            cart.printItems();
+
+
+        </script>
+    </head>
+
+    <body>
+        for (i in cart.item) {
+        console.log(`${Object.keys(cart.item[i])} = ${Object.values(cart.item[i])}`);
+        }
+    </body>
+
+</html>

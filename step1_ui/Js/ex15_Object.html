@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Array</title>
+        <title>object</title>
         <script>
             //객체 생성 방식
             // 1. 리터럴 방식
@@ -21,10 +22,45 @@
             // 비어있는 객체 생성
 
             var dog = new Object();
+
+            //학생 개체
+            //이름, 나이, 전화번호, 듣는 과목, 수료여부(t,f)
+
+            var student = new Object();
+            student.name="김이박최강 러마스"
+            student.age=25
+            student.tel='010-1234-5678'
+            student.class=['산대특 풀스텍 개발자']
+            student.complet=false
+
+            console.log(student.name)
+
+            // in : 특정 속성이 객체에 포함되어 있는지 확인하는 방법
+            console.log('name' in student) //결과는 true or false로 반환
+
+            //for-in 문을 사용하면 객체에 포함된 모든 프로퍼티에 대해 순회를 수행할 수 있다.
+            for (i in student) {
+                    console.log(`${i} = ${student[i]}`);
+            }
+
+            //생성자
+            //객체를 생성하는 특수한 기능을 가진 함수
+            function User(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            //생성자의 사용
+            var u1 = new User("김라트",20);
+            console.log(`이름: ${u1.name} / 나이: ${u1.age}`);
+
+            
         </script>
     </head>
 
     <body>
+
+
 
     </body>
 

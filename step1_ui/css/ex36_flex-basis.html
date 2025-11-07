@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexitems</title>
+        <style>
+            .container {
+                display: flex;
+                border: 2px dashed black;
+                width: 800px;
+                height: 120px;
+            }
+            .item {
+                padding: 10px 0;
+                border: 2px solid gray;
+                margin: 5px;
+            }
+            /* 플랙스 아이템의 기본크기 지정 */
+            .a {
+                flex-basis: 100px; /* 초기 크기를 100px로 설정 */
+            }
+            .b {
+                flex-basis: 200px; /* 초기 크기를 200px로 설정 */
+            }
+            .c {
+                flex-basis: 300px; /* 초기 크기를 300px로 설정 */
+            }
+        </style>
+        </head>
+
+    <body>
+        <h2>flex-basis 예제</h2>
+        <div class="container">
+            <div class="item a">1</div>
+            <div class="item b">2</div>
+            <div class="item c">3</div>
+        </div>
+
+    </body>
+
+</html>

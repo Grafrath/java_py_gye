@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>탭에 들어가는 제목</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: system-ui, sans-serif;
+                background: #f5f6fa;
+                color: #333;
+            }
+            header {
+                background: black;
+                color: white;
+                text-align: center;
+                padding: 8px;
+            }
+            a {
+                isplay: flex;
+                justify-content: center;
+                gap: 12px;
+                list-style: none;
+                margin: 0;
+                color: inherit;
+                display: block;
+
+            }
+            footer {
+                background: #666;
+                color: whitesmoke;
+                padding: 8px 0 8px 3vh;
+            }
+            aside{
+                background: whitesmoke;
+                border: 2px solid #8fb4ff;
+                border-radius: 10px;
+                padding: 16px;
+                margin: 8px;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .post {
+                width: 300px;
+                border: 2px solid rebeccapurple;
+                margin: 16px;
+                border-radius: 16px;
+            }
+            .thumb {
+                height: 180px;
+                width: 100%;
+            }
+            .layout {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            @media(max-width: 767px) {
+                nav {
+                    display: none;
+                }
+            }
+            @media(min-width: 768px) {
+                .layout {
+                    flex-direction: row;
+                    align-items: flex-start;
+                }
+                main {
+                    flex: 1 1 auto;
+                }
+                aside {
+                    flex: 0 0 30vh;
+                }
+                .container {
+                    flex-direction: row;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div ">
+             
+            <header>
+                <h1>여기는 헤더 영역입니다.</h1>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#">1번</a></li>|
+                        <li><a href="#">2번</a></li>|
+                        <li><a href="#">3번</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="layout">
+                <main>
+                
+                    <p>여기는 메인 콘텐츠 영역입니다.</p>
+                
+                    <div class="container">
+                
+                        <div class="post">
+                            <img class="thumb" src="./images/rabbit.png">
+                            <section class="content">
+                                <p>테스트</p>
+                                <p>2025-11-04 · 카테고리</p>
+                            </section>
+                        </div>
+                
+                        <div class="post">
+                            <img class="thumb" src="./images/keyboard.png">
+                            <section class="content">
+                                <p>테스트</p>
+                                <p>2025-11-04 · 카테고리</p>
+                            </section>
+                        </div>
+                
+                        <div class="post">
+                            <img class="thumb" src="./images/labtop.png">
+                            <section class="content">
+                                <p>테스트</p>
+                                <p>2025-11-04 · 카테고리</p>
+                            </section>
+                        </div>
+                
+                        <div class="post">
+                            <img class="thumb" src="./images/mouse.png">
+                            <section class="content">
+                                <p>테스트</p>
+                                <p>2025-11-04 · 카테고리</p>
+                            </section>
+                        </div>
+                
+                    </div>
+                
+                </main>
+                
+                <aside>
+                    <h3>사이드바</h3>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <footer>
+                <small>© 2025 Split Hero</small>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

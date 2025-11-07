@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px; /* 아이콘과 텍스트 사이 간격 */
+                padding: 10px 16px;
+                border-radius: 6px;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+                color: #fff;
+                transition: opacity 0.2s;
+            }
+            .btn__text {
+                color: #ffffff;
+                font-size: 20px;
+            }
+            .btn--success {
+                background-color: rgb(34, 143, 7);
+            }
+            .btn--disabled{
+                background-color: gray;
+                cursor: not-allowed;
+                opacity: 0.6;
+            }
+            .btn:not(.btn--disabled):hover {
+                opacity: 0.6;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div>
+            <h2 align="center">BEM 버튼 컴포넌트 예제</h2>
+            <button class="btn btn--success">
+                <span class="btn__text">확인</span>
+            </button>
+            <button class="btn btn--disabled">
+                <span class="btn__text">비활성</span>
+            </button>
+        </div>
+
+    </body>
+    
+</html>

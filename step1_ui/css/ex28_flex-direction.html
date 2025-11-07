@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox Example</title>
+        <link href="box.css" rel="stylesheet">
+        <style>
+            .row {
+                /* flex-direction의 기본값이 row다. */
+                display: flex;
+                flex-direction: row;
+            }
+            .row-reverse {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            .column {
+                display: flex;
+                flex-direction: column;
+            }
+            .column-reverse {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>row</h3><br>
+        <section class="row">
+            <div class="box a">01</div>
+            <div class="box b">02</div>
+            <div class="box c">03</div>
+        </section>
+        <h3>row-reverse</h3><br>
+        <section class="row-reverse">
+            <div class="box a">01</div>
+            <div class="box b">02</div>
+            <div class="box c">03</div>
+        </section>
+        <h3>column</h3><br>
+        <section class="column">
+            <div class="box a">01</div>
+            <div class="box b">02</div>
+            <div class="box c">03</div>
+        </section>
+        <h3>column-reverse</h3><br>
+        <section class="column-reverse">
+            <div class="box a">01</div>
+            <div class="box b">02</div>
+            <div class="box c">03</div>
+        </section>
+    </body>
+
+</html>

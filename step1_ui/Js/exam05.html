@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Exam05</title>
+        <script>
+            //학생의 이름(name), 나이(age), 전공(major)를
+            //속성으로 가지는 student 객체를 만들고
+            //콘솔에 각 값을 출력하세요
+
+            var student = new Object();
+            student.name = "김이박최강 러마스"
+            student.age = 25
+            student.major = ['산대특 풀스텍 개발자']
+            
+            for (i in student) {
+                console.log(`${i} = ${student[i]}`);
+            }
+
+            console.log('-------------------');
+
+            const car = { brand: "Hyundai", model: "Sonata" };
+            car.year = 2024
+            car.model = 'Avante'
+
+            for (i in car) {
+                console.log(`${i} = ${car[i]}`);
+            }
+
+            //1. year 속성을 추가하여 값 2024 저장하기
+            //2. model 속성을 'Avante'로 수정하기
+
+            console.log('-------------------');
+
+            const scores = { kor: 85, eng: 90, math: 78 };
+
+            //for - in을 사용하여 과목명과 점수를 다음 형식으로 출력하라
+
+            //kor : 85
+            //eng : 90
+            //math : 78
+            
+            for (i in scores) {
+                console.log(`${i} = ${scores[i]}`);
+            }
+
+            console.log('-------------------');
+            </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

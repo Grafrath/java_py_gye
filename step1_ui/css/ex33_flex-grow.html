@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexitems</title>
+    <style>
+        .cards {
+            display: flex;
+            gap: 10px;
+        }
+
+        .card {
+            padding: 20px;
+            text-align: center;
+            background: rebeccapurple;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .bic {
+            flex-grow: 2;
+        }
+
+        .small {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <div class="card bic">메인영역</div>
+        <div class="card small">사이드1</div>
+        <div class="card small">사이드2</div>
+    </div>
+</body>
+
+</html>

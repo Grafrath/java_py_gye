@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+            console.log();
+
+            // 실습1
+            let a = 25;
+            console.log("농구공 갯수는: ", a);
+            let b = a/4 + 1;
+            console.log("필요한 박스의 갯수는",parseInt(b));
+
+            // 실습2
+            let price = 10000;
+            let age01 = 19;
+            let age02 = 21;
+            let f01 = age01 >= 20 ? price * 1 :price * 0.8
+            let f02 = age02 >= 20 ? price * 1 : price * 0.8
+            console.log("티켓가격은:", f01);
+            console.log("티켓가격은:", f02);
+
+            // 실습3
+            let rank = "vip";
+            let pri =21000;
+            let isFree = price >= 30000 || rank === "vip";
+            console.log("무료배송? ", isFree);
+
+            // 실습4
+            let cel = 26;
+            let air =   cel >= 24 ? "냉방 작동" : 
+                        cel >= 21 ? "대기 상태" : "난방 작동";
+            console.log("에어컨 상태:", air);
+
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

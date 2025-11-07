@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Type Conversion</title>
+    </head>
+
+    <body>
+
+        <script>
+            // 명시적 형변환 (Explicit Conversion)
+            // 개발자가 함수나 연산자를 써서 직접 데이터의 타입을 바꾸는 것을 말한다.
+
+            // 문자열 → 숫자
+            //parseInt: 정수 변환, parseFloat: 실수 변환
+            //Number: 숫자 변환
+            let num1 = Number('42');         // 42
+            console.log(typeof num1, num1);
+            let num2 = parseInt('3.14');     // 3
+            console.log(typeof num2, num2);
+            let num3 = parseFloat('3.14');   // 3.14
+            console.log(typeof num3, num3);
+            
+            // 숫자 → 문자열
+            //String: 문자열 변환, toString: 문자열 변환
+            let str1 = String(123);          // '123'
+            console.log(typeof str1, str1);
+            let str2 = (456).toString();     // '456'
+            console.log(typeof str2, str2);
+
+            // 숫자 → 불리언
+            let bool1 = Boolean(1);          // true
+            console.log(typeof bool1, bool1);
+            let bool2 = Boolean(0);          // false
+            console.log(typeof bool2, bool2);
+
+            //암묵적 형변환 (Implicit Conversion)
+            // 자바스크립트 엔진이 자동으로 데이터의 타입을 바꾸는 것을 말한다.
+
+            // 문자열 결합
+            let implicit1 = '5' + 2
+            console.log(typeof implicit1, implicit1)
+            let implicit2 = 'Hello' + true;  // 'Hellotrue'
+            console.log(typeof implicit2, implicit2)
+
+            // 숫자 연산
+            let implicit3 = '5' - 2;         // 3  (문자열 → 숫자)
+            console.log(typeof implicit3, implicit3)
+            let implicit4 = true - 1;        // 0
+            console.log(typeof implicit4, implicit4)
+            let implicit5 = false - 1;       // -1
+            console.log(typeof implicit5, implicit5)
+
+            // 비교 연산자 (느슨한 ==)
+            let eq1 = ('5' == 5);            // true (문자열 → 숫자)
+            console.log(typeof eq1, eq1)
+            let eq2 = (0 == false);          // true
+            console.log(typeof eq2, eq2)
+            let eq3 = ('' == 0);             // true
+            console.log(typeof eq3, eq3)
+            let eq4 = (null == undefined);   // true
+            console.log(typeof eq4, eq4)
+
+            // 엄격 비교 (===)
+            let strict1 = (0 === false);     // false
+            console.log(typeof strict1, strict1)
+            let strict2 = ('5' === 5);       // false
+            console.log(typeof strict2, strict2)
+
+            // 논리 연산자
+            let logic1 = !!'hello';          // true
+            console.log(typeof logic1, logic1)
+            let logic2 = !!'';               // false
+            console.log(typeof logic2, logic2)
+            let logic3 = ('hi' || 'bye');    // 'hi'
+            console.log(typeof logic3, logic3)
+            let logic4 = (0 || 'bye');       // 'bye'
+            console.log(typeof logic4, logic4)
+
+            // 예외 케이스
+            let tricky1 = ([] == 0);         // true
+            let tricky2 = ([] == '');        // true
+            let tricky3 = ([0] == 0);        // true
+            let tricky4 = (NaN === NaN);     // false
+            let tricky5 = Number.isNaN(NaN); // true
+
+        </script>
+
+    </body>
+
+</html>

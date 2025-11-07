@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>flexbox layout 연습</title>
+        <style>
+            ul li{
+                list-style: none;
+                float: left;
+                display: flex;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                width: 120px;
+            }
+            div{
+                display: flex;
+            }
+            .header{
+                background: #1adb00;
+                justify-content: center;
+                color: white;
+            }
+            .navi{
+                background: lch(38.09% 61.22 136.3);
+                justify-content: center;
+            }
+            .card {
+            padding: 20px;
+            text-align: center;
+            background: #e0e0e0;
+            font-weight: bold;
+            gap: 10px;
+            }
+            .bic {
+                flex-grow: 3;
+                background: hsl(0, 0%, 100%);
+                color: black;
+            }
+            .small {
+                flex-grow: 1;
+                background: hwb(0 60% 40%);
+                color: black;
+            }
+            .finish {
+                background-color: rgb(34, 0, 126);
+                padding: 2px;
+                font-size: 14px;
+                justify-content: center;
+            }
+        </style>
+        </head>
+
+    <body>
+
+        <div class="header">
+        <h1>Flexbox Layout 연습</h1>
+        </div><!-- 맨윗 -->
+
+        <div class="navi">
+            <nav>
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의</a></li>
+                </ul>
+            </nav>
+        </div><!-- 네비게이션 바 -->
+
+        <div class="card">
+            <div class="bic">
+                <div fon>메인 콘텐츠</div>
+                <div>
+                    <br>
+                    이 영역은 본문 내용을 표시하는 구역이다<br>
+                    Flexbox를 이용해 왼쪽에 배치된다.<br>
+                </div>
+            </div>
+            <div class="small">
+                <div>
+                    사이드바
+                </div>
+                <div>
+                    <br>보조 정보나 공지사항을 표시하는 구역이다.<br>
+                </div>
+            </div>
+        </div><!-- 카드 레이아웃 -->
+
+        <div class="finish">
+            <p>ⓒ 2025 FLex Layout Praction</p>
+        </div>
+
+    </body>
+
+</html>

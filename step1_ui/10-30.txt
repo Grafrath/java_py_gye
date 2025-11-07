@@ -1,0 +1,130 @@
+강사 이름 : 이현준
+이메일 : eyunp07@naver.com
+ㄴ 질문 여기로 보내주세요
+
+보강 가능한 시간
+금요일 저녁
+주말
+
+화면구현
+HTML + CSS + JS + React
+
+헤더 태그
+제목,부제목
+<h1>Heading 1 tag</h1>
+<h2>Heading 2 tag</h2>
+<h3>Heading 3 tag</h3>
+
+개행 태그(줄바꿈)
+<br />
+
+block : 한 줄을 통째로 차지하게 해주는 속성
+문단 태그(block 속성)
+<p></p>
+
+서식태그
+<strong> : 글자 두껍게
+<em> : 글자 기울이기
+<del> : 취소선
+<small> : 글자가 작게 나옴
+<sub> : 글자가 약간 아래에 나옴
+<sup> : 글자가 약간 위에 나옴
+
+링크 태그
+<a href="경로">내용</a>
+
+이미지 태그
+<img 
+    src="이미지의 경로
+    alt="깨질 때 나올 문구"
+    width="너비"
+    height="높이"
+>
+
+리스트 태그
+<ul></ul>
+<ol></ol>
+
+영역을 나누는 태그
+<div> </div>
+
+텍스트에 스타일을 주고싶을 때
+<span>
+
+시맨틱 태그
+<header> : 머릿말
+<nav> : 메뉴바
+<main> : 주 내용
+<section> : 관련된 주제
+<article> : 게시글
+<time datetime="> : 시간
+<footer> : 링크, 이메일, 주소, 회사
+
+스타일
+
+문법
+선택자 { 속성 : "속성값"; 속성 : "속성값";}
+
+HTML에 CSS를 적용하는 방식
+1. 태그 안에 style속성으로 주기
+2. <style>태그 안에 정의하기
+3. 외부 파일에 작성하고 <link>태그로 불러오기
+
+태그를 선택하는 방법
+1. 태그를 직접 선택 (해당 페이지의 같은 태그가 전부 선택)
+2. 클래스 선택자(태그에 class 속성을 준다.)
+ㄴ .클래스명{스타일}
+3. 아이디 선택자(아이디값이 겹치지 않게 정한다.)
+ㄴ #아이디값{스타일}
+4. 속성선택자(특정 속성 또는 특정 속성값을 가지는 태그를 선택)
+ㄴ [속성] , [속성=값]
+
+테두리 속성
+border-width : 테두리 두께
+border-style : 테두리 스타일
+border-color : 테두리 색깔
+border : 두께, 스타일, 색깔을 한 번에 지정할 수 있는 축약속성
+border-radius : 테두리 둥글게 만듦
+
+배경(background)스타일
+background-color : 배경색 지정
+background-image : 배경 이미지나 그라디언트를 지정한다.
+background-position : 배경 이미지의 시작 위치
+background-size : 배경 이미지 크기 지정
+background-repeat : 배경 이미지 반복 여부 및 방향 결정
+background : 위 속성들을 축약한 속성
+
+텍스트 스타일링
+font-family : 폰트를 지정
+font-size : 폰트의 크기
+font-weight : 폰트의 두께
+font-style : 폰트 기울기
+
+
+line-height : 줄 간격
+text-align : 텍스트의 정렬
+text-indent : 들여쓰기
+letter-spacing : 글자 간격
+word-spacing : 단어 간격
+color : 글씨색 바꾸기
+text-decoration : 밑줄,취소선, 윗줄과 같은 장식선
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

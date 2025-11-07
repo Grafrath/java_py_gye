@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: gray;
+            border: 1px solid yellowgreen;
+            padding: 10px;
+            margin: 10px;
+        }
+        div{
+            border: 1px solid orange;
+            padding: 10px;
+            margin: 10px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            color: tomato;
+            background: rgb(107, 107, 177);
+            line-height: 100px;
+            text-align: center;
+        }
+        .static{
+            position: static;
+        }
+        .relative{
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+        .absolute-parent{
+            position: relative;
+            border: 1px solid black;
+            background: darkolivegreen;
+            height: 100px;
+            width: 100px;
+        }
+        /* absolute : 가까운 부모요소를 기준으로 이동시킴
+            구조에서 벗어남 */
+        .absolute-child{
+            position: absolute;
+            border: 1px solid tomato;
+            top : 50%;
+            left: 50%;
+        }
+        .fixed{
+            /* 화면기준으로 고정 / 스크롤해도 따라옴 */
+            position: fixed;
+            color: black;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box static" id="div1">static</div>
+    <div class="box relative">relative</div>
+    <div class="absolute-parent">
+        <div class="box absolute-child">absolute</div>
+    </div>
+    <div class="box fixed">fixed</div>
+</body>
+</html>

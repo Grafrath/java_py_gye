@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexitems</title>
+        <style>
+            a:link {
+                color: red;
+            }
+            a:visited {
+                color: #9b59b6;
+            }
+            a:hover {
+                color: orange;
+                text-decoration: none;
+            }
+            :active {
+                color: #3498db;
+            }
+           
+            input:focus {
+                border: 2px solid #2ecc71;
+                outline: none;
+            }
+            /* :link → :visited → :hover → :active 순서로 작성해야 예측 가능한 동작이 된다. */
+        </style>
+        </head>
+
+    <body>
+        <h2>동적 의사 클래스 예제</h2>
+        <a href="#" target="_blank">Example 링크</a>
+        <br><br>
+        <input type="text" placeholder="여기에 포커스를 맞춰보세요">
+    </body>
+
+</html>

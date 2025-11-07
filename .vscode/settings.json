@@ -1,0 +1,55 @@
+{
+    "editor.codeActionsOnSave": {},
+    "editor.tokenColorCustomizations": {
+
+        "[*Light*]": {
+            "textMateRules": [
+
+                // inspect editor tokens and scopes
+                {
+                    "scope": "ref.matchtext", 
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                },
+
+                {
+                    "scope": "comment.line.double-slash.js",
+                    "settings": {
+                        "foreground": "#a3a3a3"
+                    }
+                },
+
+                {
+                    "scope": "variable.other.property.js",
+                    "settings": {
+                        "foreground": "#ff4444"
+                    }
+                },
+
+                {
+                    "scope": "keyword.control.loop.js",
+                    "settings": {
+                        "foreground": "#45801d"
+                    }
+                },
+                {
+                    "scope": "keyword.operator.new.js",
+                    "settings": {
+                        "foreground": "#a05500"
+                    }
+                },
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        }
+    }
+}

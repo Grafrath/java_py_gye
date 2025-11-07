@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexitems</title>
+        <style>
+            .container {
+                display: flex;
+                align-items: center;
+                border: 2px dashed black;
+                height: 200px;
+                padding: 10px;
+                gap: 10px;
+            }
+            .item {
+                width: 100px;
+                text-align: center;
+                padding: 10px 0;
+                border: 2px solid gray;
+            }
+            .a {
+                align-self: auto; /* 기본값 */
+            }
+            .b {
+                align-self: flex-start; /* 컨테이너의 시작점에 정렬 */
+            }
+            .c {
+                align-self: flex-end; /* 컨테이너의 끝점에 정렬 */
+            }
+            .d {
+                align-self: stretch; /* 컨테이너의 높이에 맞게 늘림 */
+            }
+        </style>
+        </head>
+
+    <body>
+        <h2>align-self 예제</h2>
+
+        <div class="container">
+            <div class="item a">기본</div>
+            <div class="item b">flex-start</div>
+            <div class="item c">flex-end</div>
+            <div class="item d">stretch</div>
+        </div>
+    </body>
+
+</html>

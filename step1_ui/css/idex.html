@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyName</title>
+    <style>
+        /* 공통 스타일 ---------------------------- */
+        body{
+            background: linear-gradient(to right , rgb(104, 104, 228), rgb(221, 105, 105));
+            margin: 0;
+        }
+        .container {
+        max-width: 1000px;   /* 컨테이너가 너무 넓어지지 않도록 최대 너비 제한 */
+        width: 100%;         /* 화면이 작을 때는 100%로 꽉 차게 */
+        margin: 0 auto;      /* 수평 가운데 정렬 (좌우 margin을 자동으로 배분) */
+        padding: 16px;       /* 모바일에서 화면 끝에 딱 붙지 않도록 안쪽 여백 */
+        background-color: #eaeef1; /* 보기 편하게 배경색 */
+        border: 1px solid #ee1919;    /* 컨테이너 영역을 눈으로 확인하기 위해 테두리 */
+        border-radius: 8px;        /* 모서리를 둥글게 (요즘 스타일) */
+        }
+        
+        /* header -------------------------------- */
+        header{
+            display: flex;
+            align-items: center; /* 세로 가운데 맞춤 */
+            gap: 20px; /* 요소 사이 간격 */
+            padding-bottom: 20px;
+            border-bottom: solid 2px #ccc;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            aspect-ratio: 1/1;
+            border: solid lightskyblue;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        span{
+            font-family: "고딕";
+            font-weight: 1000;
+            font-size: 40px;
+        }
+        header.name{
+            display: block;
+        }
+        header.name-sub{
+            color: rgb(84, 158, 187);
+        }
+
+        /* main -------------------------------- */
+        main{
+            padding: 10px;
+        }
+        .bold{
+            font-size: 120%;
+            font-weight: 1000;
+        }
+
+        section{
+            /* container 베낌 */
+            min-width: 500px;   /* 컨테이너가 너무 넓어지지 않도록 최대 너비 제한 */
+            width: 95%;         /* 화면이 작을 때는 100%로 꽉 차게 */
+            /margin: 0 auto;      /* 수평 가운데 정렬 (좌우 margin을 자동으로 배분) */
+            padding: 16px;       /* 모바일에서 화면 끝에 딱 붙지 않도록 안쪽 여백 */
+            background-color: #dbdddf; /* 보기 편하게 배경색 */
+            border: 1px solid #ccc;    /* 컨테이너 영역을 눈으로 확인하기 위해 테두리 */
+            border-radius: 8px;        /* 모서리를 둥글게 (요즘 스타일) */
+        }
+        .makdae{
+            border-left: 4px solid purple;
+            padding-left: 4px;
+        }
+        .sero{
+            border: solid orange;
+            display: block;
+            margin: 10px 0;
+            width:auto;
+        }
+        .garo{
+            position: relative;
+            display: inline-block;
+            max-width: 45%;
+            min-width: 1%;
+            overflow-y: auto;
+            border: solid pink;
+        }
+        .date1{
+            position: absolute;
+            right: 1%;
+            top: 1%;
+        }
+        .date2{
+            position: absolute;
+            right: 1%;
+            top: 1%;
+        }
+        /* footer -------------------------------- */
+        footer{
+            border-top: solid 1px #ccc;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../images/rabbit.png" alt="잘나오나?" >
+            <div>
+                <div class="name"><span >홍길동</span> / Front-End Developer</div> 
+                <div class="name name-sub">초보 웹 개발자 HTML/CSS 학습 중</div>
+                <div>어필하는 내용 어필하는 내용 어필하는 내용 어필하는 내용 어필하는 내용</div>
+            </div>
+        </header>
+        <main>
+            <h2>기술 스택 / 사용 가능 기술</h2>
+            <section class="sero">
+                <div class="makdae">HTML</div>
+                <ul>
+                    <li>시멘틱 태그 사용 가능 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 </li>
+                    <li>이미지, 링크 등 사용 가능</li>
+                </ul>
+            </section>
+            <section class="sero">
+                <div class="makdae">CSS</div>
+                <ul>
+                    <li>border 사용가능</li>
+                    <li>컨테이너 개꿀 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 내용이 길면 어떻게 되는지 확인이 필요함 </li>
+                    <li>display</li>
+                </ul>
+            </section>
+            <h2>프로젝트</h2>
+            <section class="garo">
+                <div class="bold">포트폴리오 페이지 만들기</div>
+                <div>내용채우기 내용채우기 내용채우기 내용채우기 내용채우기 내용채우기 내용채우기 내용채우기</div>
+                <div class="date1">날짜 작성1</div>
+            </section>
+            <section class="garo">
+                <div class="bold">포트폴리오 페이지 만들기</div>
+                <div>내용채우기 내용채우기 내용채우기 내용채우기 내용채우기 내용채우기 내용채우기 내용채우기</div>
+                <div class="date2">날짜 작성2</div>
+            </section>
+        </main>
+        <footer>
+            <h3>연락처</h3>
+            이메일 :  <a href="#">hello@example.com</a><br>
+            Github :  <a href="#">github.com/example</a><br>
+            포트폴리오 시연 영상 : <a href="#">링크 바로가기</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script>
+            console.log('-------------------');
+
+            //메서드 생성방법
+            var peron = {
+                name: '홍길동',
+                age: 25,
+                //메서드의 정의( function(), function을 생략해도 작동 )
+                introduce: function () {
+                    console.log(`안녕하세요 저는 ${this.name}이고,
+                    ${ this.age}살 입니다.`)
+                }
+            }
+            peron.introduce();
+
+            //메서드 안에 this. 를 써야하는 이유
+            //this.를 작성하지 않으면 name과 age라는 변수를 찾는다.
+            //프로퍼티는 변수가 아니라서 변수가 없다는 에러 발생(undefined)
+            //호출한 객체 자신의 요소라는 의미의 this를 붙여줘야 name과 age가 프로퍼티 값을 출력
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

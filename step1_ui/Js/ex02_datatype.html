@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+            // number
+            let num1 = 10; 
+            let num2 = 3.14;
+            console.log("num1:", num1, "type:", typeof num1);
+            console.log("num2:", num2, "type:", typeof num2);
+
+            //NaN(not a number) 예제
+            //정수를 0으로 나누면 발생
+            //숫자로 해석 불가능한 문자열을 수학연산하려할 때
+            console.log(Number("hello")); 
+            console.log("NaN의 타입: "+ typeof NaN); //number 타입
+            //infinity 무한대
+            console.log("infinity의 타입: "+ typeof Infinity); //number 타입
+            //-infinity 음의 무한대
+            console.log("-infinity의 타입: "+ typeof -Infinity); //number 타입
+            //string
+            //작은따옴표, 큰따옴표, 백틱 ${}사용
+            let str1 = '안녕하세요';
+            let str2 = "JavaScript입니다.";
+            let str3 = `백틱을 사용하면 ${str1} ${str2}`;
+            console.log(str1);
+            console.log(str2);
+            console.log(str3);
+            //boolean
+            //true, false
+            let bool1 = true;
+            let bool2 = false;
+            console.log("bool1:", bool1, "type:", typeof bool1);
+
+            //undefined
+            //값이 할당되지 않은 상태
+            let un1;
+            console.log("un1:", un1, "type:", typeof un1);
+
+            //bigint
+            //정수 범위 초과한 큰 숫자 다룰 때
+            let big1 = 9876543210123456789n;
+            let big2 = 9876543210123456789;
+            console.log("big1:", big1, "type:", typeof big1);
+            console.log("big2:", big2, "type:", typeof big2);
+            //number는 최대 정확도 존재
+            //정수 최대값: 9007199254740991 (2^53 -1)
+            //bigint는 뒤에 n 붙임
+            //bigint는 오차없이 매우 큰 정수 표현 가능
+
+            //symbol
+            //고유한 식별자 필요할 때 사용
+            // 같은 설명이어도 서로 다른 심볼 생성
+            //괄호 안에 들어가는 것은 주석같은 개념
+            let sym1 = Symbol("id");
+            let sym2 = Symbol("id");
+            console.log("sym1:", sym1, "type:", typeof sym1);
+            console.log("sym2:", sym2, "type:", typeof sym2);
+            console.log("sym1 === sym2:", sym1 === sym2); //false
+
+            //객체(object)
+
+            </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

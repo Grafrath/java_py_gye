@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox Example</title>
+        <link rel="stylesheet" href="box.css">
+        <style>
+
+            section{
+                align-items: baseline;
+            }
+            
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .a{
+                height: 100px;
+                font-size: 32px;
+            }
+            .b{
+                height: 150px;
+                font-size: 24px;
+            }
+            .c{
+                height: 80px;
+                font-size: 40px;
+            }
+            .d{
+                height: 120px;
+                font-size: 80px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>baseline</h2>
+        <section class="baseline">
+            <div class="box a">01</div>
+            <div class="box b">02</div>
+            <div class="box c">03</div>
+            <div class="box d">04</div>
+        </section>
+    </body>

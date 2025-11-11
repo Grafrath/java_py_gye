@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox Example</title>
+        <style>
+            ul {
+                display: flex;
+                gap: 10px;
+                list-style: none;
+            }
+            img {
+                width: auto;
+                height: auto;
+                max-width: 400px;
+                max-height: 300px; 
+            }
+        </style>
+        <script>
+            let list = 1
+            let maxList=7
+
+            function chan(op) {
+                const image = document.querySelector("#image");
+
+                if (op === '>') {
+                    list++;
+                    if (list > maxList) list = 1;
+                } else if (op === '<') {
+                    list--;
+                    if (list < 1) list = maxList;
+                }
+                
+                image.setAttribute('src', `dog${list}.jpg`);
+            }
+
+        </script>
+    </head>
+
+    <body>
+
+        <ul>
+            <li><input type="button" id="undo" value="<" onclick="chan('<')"></li>
+            <li><img src="dog1.jpg" id="image" max-width: 400px;></li>
+            <li><input type="button" id="next" value=">" onclick="chan('>')"></li>
+        </ul>
+
+    </body>
+
+</html>

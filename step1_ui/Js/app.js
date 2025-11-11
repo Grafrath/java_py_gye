@@ -204,3 +204,143 @@ loadMoreBtn.addEventListener('click', fetchPosts);
 
 // 초기 로드
 fetchPosts();
+
+/*
+const API_URL = 'https://jsonplaceholder.typicode.com/posts';
+
+const postsContainer = document.getElementById('posts');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const refreshBtn = document.getElementById('refreshBtn');
+
+const postForm = document.getElementById('postForm');
+const postIdInput = document.getElementById('postId');
+const titleInput = document.getElementById('title');
+const bodyInput = document.getElementById('body');
+const submitBtn = document.getElementById('submitBtn');
+const cancelBtn = document.getElementById('cancelBtn');
+
+const listLoader = document.getElementById('listLoader');
+const formLoader = document.getElementById('formLoader');
+
+let posts = [];
+let limit = 10;
+let start = 0;
+let editing = false;
+
+// --------------------
+// 공통 로딩 토글 함수
+// --------------------
+function toggleLoader(loader, show) {
+  loader.classList.toggle('hidden', !show);
+  loader.setAttribute('aria-hidden', !show);
+}
+
+// --------------------
+// 게시글 목록 불러오기
+// --------------------
+async function fetchPosts(refresh = false) {
+  toggleLoader(listLoader, true);
+
+  if (refresh) {
+    posts = [];
+    start = 0;
+    postsContainer.innerHTML = '';
+  }
+
+  try {
+    const res = await fetch(`${API_URL}?_start=${start}&_limit=${limit}`);
+    const data = await res.json();
+    posts = posts.concat(data);
+    renderPosts();
+    start += limit;
+  } catch (error) {
+    alert('게시글을 불러오는 중 오류가 발생했습니다.');
+  } finally {
+    toggleLoader(listLoader, false);
+  }
+}
+
+// --------------------
+// 게시글 렌더링
+// --------------------
+function renderPosts() {
+  postsContainer.innerHTML = posts.map(post => `
+    <li class="list-item">
+      <strong>${post.title}</strong>
+      <p>${post.body}</p>
+      <div class="row">
+        <button class="editBtn" data-id="${post.id}">수정</button>
+        <button class="deleteBtn muted" data-id="${post.id}">삭제</button>
+      </div>
+    </li>
+  `).join('');
+
+  // 각 버튼에 이벤트 바인딩
+  document.querySelectorAll('.editBtn').forEach(btn =>
+    btn.addEventListener('click', () => editPost(btn.dataset.id))
+  );
+  document.querySelectorAll('.deleteBtn').forEach(btn =>
+    btn.addEventListener('click', () => deletePost(btn.dataset.id))
+  );
+}
+
+// --------------------
+// 게시글 작성/수정 폼 제출
+// --------------------
+postForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const title = titleInput.value.trim();
+  const body = bodyInput.value.trim();
+
+  if (!title || !body) {
+    alert('제목과 내용을 모두 입력해주세요.');
+    return;
+  }
+
+  toggleLoader(formLoader, true);
+  submitBtn.disabled = true;
+
+  try {
+    if (editing) {
+      const id = postIdInput.value;
+      const res = await fetch(`${API_URL}/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, title, body, userId: 1 })
+      });
+      const updatedPost = await res.json();
+
+      posts = posts.map(p => (p.id == id ? updatedPost : p));
+      renderPosts();
+      resetForm();
+      alert('게시글이 수정되었습니다.');
+    } else {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, body, userId: 1 })
+      });
+      const newPost = await res.json();
+
+      posts.unshift(newPost);
+      renderPosts();
+      resetForm();
+      alert('게시글이 작성되었습니다.');
+    }
+  } catch (error) {
+    alert('요청 중 오류가 발생했습니다.');
+  } finally {
+    toggleLoader(formLoader, false);
+    submitBtn.disabled = false;
+  }
+});
+
+// --------------------
+// 게시글 수정 버튼 클릭
+// --------------------
+function editPost(id) {
+  const post = posts.find(p => p.id == id);
+  if
+
+*/

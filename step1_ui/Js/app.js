@@ -51,9 +51,13 @@ function setloading(el,on) {
     }
 }
 
+function escapeHtml(s) {
+    return s ? String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+}
+
 //게시물 목록을 불러와 렌더링
 //로딩중이면 중복호출을 막고 에러발생시 에러메세지 출력
-
+//성공하면 renderPosts에 데이터를 넘긴다.
 async function fetchPosts() {
     if (loading) return; //로딩중이면 실행x
     loading = true;
@@ -84,68 +88,42 @@ function renderPosts(items) {
             //ul 태그에 소괄호 안에 있는 내용 삽입
             //beforeend 선택한 요소 안쪽 맨 뒤
             'beforeend',
-            `<li class="item"><div class="meta muted">더 이상 게시물이 없습니다</div></li>`);
+            `<li class="item"><div class="meta muted">더 이상 게시물이 없습니다</div></li>`
+        );
         loadMoreBtn.disabled = true;
         return;
     }
 
     //각 게시물 생성
+
+    for (const p of items) {
+        //li 요소를 만들겠다
+        const li = document.createElement('li');
+        li.className = 'item';
+        li.innerHTML = `
+        <div style="width:36px; height:36px; border-radius:6px; background:#eef8ff; display:flex;
+        align-items:center;justify-content:center;color:var(--accent);font-weight:700">${p.id}</div>
+        <div style="flex:1">
+            <div class="meta">작성자: ${p.userId} · ID: ${p.id}</div>
+            <div class="title">${escapeHtml(p.title)}</div>
+            <div class="body" style="white-space:pre-wrap">${escapeHtml(p.body)}</div>
+        </div>
+        <div class="actions">
+        <button data-id="${p.id}" class="editBtn muted">수정</button>
+        <button data-id="${p.id}" class="delBtn" style="background:#fee2e2;color:#7f1d1d">삭제</button>
+        </div>`;
+        
+        postsEl.appendChild(li);
+    }
     
-    for (const p of items) {
-        const li = document.createElement('li');
-        li.className = 'item';
-        li.innerHTML = `
-      <div style="width:36px;height:36px;border-radius:6px;background:#eef8ff;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700">${p.id}</div>
-      <div style="flex:1">
-        <div class="meta">작성자: ${p.userId} · ID: ${p.id}</div>
-        <div class="title">${escapeHtml(p.title)}</div>
-        <div class="body" style="white-space:pre-wrap">${escapeHtml(p.body)}</div>
-      </div>
-      <div class="actions">
-        <button data-id="${p.id}" class="editBtn muted">수정</button>
-        <button data-id="${p.id}" class="delBtn" style="background:#fee2e2;color:#7f1d1d">삭제</button>
-      </div>
-    `;
-        postsEl.appendChild(li);
-    }
     // 이벤트 위임보다 간단히 버튼 바인딩
     document.querySelectorAll('.editBtn').forEach(b => b.onclick = onEdit);
     document.querySelectorAll('.delBtn').forEach(b => b.onclick = onDelete);
 }
 
-/*
 
-function escapeHtml(s) { return s ? String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : ''; }
-
-function renderPosts(items) {
-    if (page === 1) postsEl.innerHTML = '';
-    if (items.length === 0) {
-        postsEl.insertAdjacentHTML('beforeend', `<li class="item"><div class="meta muted">더 이상 게시물이 없습니다</div></li>`);
-        loadMoreBtn.disabled = true;
-        return;
-    }
-    for (const p of items) {
-        const li = document.createElement('li');
-        li.className = 'item';
-        li.innerHTML = `
-      <div style="width:36px;height:36px;border-radius:6px;background:#eef8ff;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700">${p.id}</div>
-      <div style="flex:1">
-        <div class="meta">작성자: ${p.userId} · ID: ${p.id}</div>
-        <div class="title">${escapeHtml(p.title)}</div>
-        <div class="body" style="white-space:pre-wrap">${escapeHtml(p.body)}</div>
-      </div>
-      <div class="actions">
-        <button data-id="${p.id}" class="editBtn muted">수정</button>
-        <button data-id="${p.id}" class="delBtn" style="background:#fee2e2;color:#7f1d1d">삭제</button>
-      </div>
-    `;
-        postsEl.appendChild(li);
-    }
-    // 이벤트 위임보다 간단히 버튼 바인딩
-    document.querySelectorAll('.editBtn').forEach(b => b.onclick = onEdit);
-    document.querySelectorAll('.delBtn').forEach(b => b.onclick = onDelete);
-}
-
+/* 여기부터 안댐 */
+// 작성/수정
 // 작성/수정
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -226,5 +204,3 @@ loadMoreBtn.addEventListener('click', fetchPosts);
 
 // 초기 로드
 fetchPosts();
-
-*/

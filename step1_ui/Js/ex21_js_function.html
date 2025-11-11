@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            function fun01() {
+                alert("메서드 정상 호출됨");
+            }
+
+            function fun02(n) {//파라미터에 자료형을 적어줄 필요가 없다.
+                //script영역에서 body로 접근하여 특정 객체를 검색
+                var res = document.getElementById("result");
+
+                res.value = n; //입력상자의 값이 홍길동으로 바뀐다.
+            }
+
+            function fun03() {
+                //name이라는 아이디를 가진 태그를 찾아서
+                //해당 태그에 쓰여있는 value를 alert()으로 출력하기
+                var res = document.getElementById("name");
+                var value = res.value;
+                alert(value);
+
+            }
+
+            function fun04() {
+                var res = document.getElementById("res").value;
+                var m_div = document.getElementById("m_div");
+                m_div.innerHTML = res;
+                //document.write();를 쓰게 되면 페이지가 아예 새로써진다.
+            }
+        </script>
+    </head>
+    
+    <body>
+        <input type="button" value="버튼1" onclick="fun01();"><!-- onclick : 마우스로 클릭했을 때 실행-->
+        <input type="button" value="파라미터 버튼" onclick="fun02('홍길동');"><br><!-- 문자로 보내고 싶을 때는 홑따옴표라도 묶어서 보내야 한다. -->
+        
+        <hr>
+        <input type="text" value="연습" id="name">
+        <input type="button" value="버튼3" onclick="fun03();"> <!-- 버튼을 눌렀을 때 입력상자에 쓰여있는 값을 호출해보고싶다.  -->
+        
+        <hr>
+        <input id="res">
+        <input type="button" value="버튼3" onclick="fun04();">
+        <div id="m_div">
+        
+        </div>
+        
+        <hr>
+        <input type="password" id="pwd"><br>
+    </body>
+
+</html>

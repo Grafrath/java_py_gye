@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Promise 예제</title>
+    </head>
+    
+    <body>
+        <button id="sync">동기화 확인</button>
+        <button id="delay">지연식 확인</button>
+        <button id="besync">비동기 확인</button>
+        
+        <script>
+            /* 
+            Promise
+            요청을 보낸 이후에 응답을 기다리는 동안 페이지가 멈추지 않고
+            계속 동작하게 하는 통신 방식을 비동기 통신이라 하고
+            주요 패턴으로 콜백 함수와 Promise 가 있다.
+            
+            Promise는 비동기 작업이 완료되었을 때 "성공 또는 실패"의 결과를 반환하는 객체
+            then과 catch를 통해 작업의 성공 또는 실패를 처리할 수 있다.
+            
+            즉시 작동하는 함수 하나와
+            지연 작동하는 함수, 비동기방식 중 Promise 객체를 비교해보았다.
+            에러 여부는 모두 랜덤이다.
+            */
+           
+            console.log('------------------------------------');
+
+            // 즉시 실행 (동기)
+            document.querySelector("#sync").addEventListener("click", () => {
+                console.log("---- [동기 실행 시작] ----");
+
+                const random = Math.random() >= 0.5;
+                if (random) {
+                    console.log("✅ 데이터를 받아왔습니다.");
+                } else {
+                    console.error("❌ 에러 발생");
+                }
+
+                console.log("---- [동기 실행 종료] ----\n");
+            });
+
+            console.log('------------------------------------');
+
+            /*
+            동기적으로 작동안된 첫번째 코드
+            // 3초 지연 실행 (setTimeout)
+            document.querySelector("#delay").addEventListener("click", () => {
+                console.log("---- [지연 실행 시작] ----");
+                console.log("3초 후 결과가 출력됩니다...");
+
+                setTimeout(() => {
+                    const random = Math.random() >= 0.5;
+                    if (random) {
+                        console.log("✅ 3초 후 데이터를 받아왔습니다.");
+                    } else {
+                        console.error("❌ 3초 후 에러 발생");
+                    }
+
+                    console.log("---- [지연 실행 종료] ----\n");
+                }, 3000);
+            });
+            */
+
+            console.log('------------------------------------');
+
+            // 비동기 실행 (Promise)
+            document.querySelector("#besync").addEventListener("click", () => {
+                console.log("---- [비동기 실행 시작] ----");
+                console.log("5초 후 Promise 결과가 출력됩니다...");
+
+                const myPromise = new Promise((resolve, reject) => {
+                    const random = Math.random() >= 0.5;
+
+                    setTimeout(() => {
+                        if (random) {
+                            resolve("✅ Promise가 성공했습니다.");
+                        } else {
+                            reject("❌ Promise가 실패했습니다.");
+                        }
+                    }, 5000);
+                });
+
+                myPromise
+                    .then((result) => console.log(result))
+                    .catch((error) => console.error(error))
+                    .finally(() => console.log("---- [비동기 실행 종료] ----\n"));
+            });
+
+            /*
+            내가 예상한 실행 결과는 지연식 확인버튼을 누를시 결과값이 나오는 3초동안 동기화 되서 다른 버튼은 작동 안되는것.
+
+            실제 결과는 비동기적으로 작동함
+
+            원인 :
+                자바스크립트는 단일 스레드(single-thread) 기반이기 때문에,
+                setTimeout 같은 지연 함수는 항상 비동기적으로 동작한다.
+
+            즉 "3초 동안 기다리는 동안 다른 작업이 멈추게(=동기적으로) 만들고 싶다" 는 요구는
+            javascript는 불가능한점을 확인할 수 있었다.
+
+            해결 방법을 검색해본 결과 3가지 방안을 찾았음
+                1번째 CPU를 강제로 점유하는 “진짜 동기 대기”
+                2번째 Web Worker로 다른 스레드 점유하기
+                3번쨰 async/await + Promise로 “논리적 동기 흐름”
+
+                이중 1, 2번쨰 방법은 아직 배우지 않았고 난이도 또한 맞지 않은 부분이 있다
+                하지만 3번째 방법은 바로 다음에 배운 async/await 방식을 사용하려 한다
+
+                async/await
+                    - Promise를 기반으로 한 비동기 처리 방식으로, 동기 처리처럼 보이지만 비동기 작업을 수행할 수 있게 해준다.
+                    - await 키워드는 Promise가 해결될 때까지 기다린다.
+            */
+
+            /*
+            async function waitPromise(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            document.querySelector("#delay").addEventListener("click", async () => {
+                console.log("---- [논리적 동기 흐름 시작] ----");
+                
+                console.log("3초 대기 중... (이후 코드 실행 안 됨)");
+                await waitPromise(3000);  // 이 줄에서 3초 기다림 (비동기지만 동기처럼 보임)
+                
+                const random = Math.random() >= 0.5;
+                
+                if (random) {
+                    console.log("✅ 3초 후 성공!");
+                } else {
+                    console.error("❌ 3초 후 실패!");
+                }
+
+                console.log("---- [논리적 동기 흐름 종료] ----\n");
+            });
+            */
+
+
+            /*
+            아직 문제가 해결되지 않았다는 점을 확인 할 수 있다.
+            현재 문제는 지연식 확인(3초 await) 중에 다른 버튼을 눌러도 그 버튼의 코드가 바로 실행돼 버린다는 점이다.
+
+            확인해본 결과 이러한 결과가 나타나는 것은 이건 브라우저 이벤트 루프의 특성 때문이라는 것을 알았다.
+            await는 코드 흐름만 잠시 멈출 뿐, 다른 버튼 클릭 이벤트 등은 계속 돌아가는 것을 알수 있었다.
+
+            즉, 지연 함수는 기다리는 중이지만, 다른 이벤트는 자유롭게 실행 가능한 상태이다.
+
+            내 최종적인 해결 목표는 지연식 버튼을 눌러 3초 대기 중일 때,
+            다른 버튼은 눌러도 작동하지 않게하는것.
+
+            이를 위한 해결 방안을 검색 해본결과 딜레이중 버튼들을 비활성화 할경우 
+            지연식 버튼을 눌러 3초 대기중일때 완전 동기처럼 잠시 막기 가능할 것이다.
+            */
+           
+            function waitPromise(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            
+            document.querySelector("#delay").addEventListener("click", async (e) => {
+                console.log("---- [지연 실행 시작] ----");
+                console.log("3초 대기 중... (다른 버튼은 비활성화됨)");
+
+                // 버튼들 비활성화
+                disableAllButtons(true);
+
+                await waitPromise(3000);
+
+                const random = Math.random() >= 0.5;
+                
+                if (random) {
+                    console.log("✅ 3초 후 데이터를 받아왔습니다.");
+                } else {
+                    console.error("❌ 3초 후 에러 발생");
+                }
+
+                // 버튼 다시 활성화
+                disableAllButtons(false);
+
+                console.log("---- [지연 실행 종료] ----\n");
+            });
+
+            // 버튼 비활성화 / 활성화 함수
+            function disableAllButtons(state) {
+                document.querySelectorAll("button").forEach(btn => {
+                    btn.disabled = state;
+                });
+            }
+        </script>
+    </body>
+    
+</html>

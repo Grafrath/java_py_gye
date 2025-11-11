@@ -39,6 +39,42 @@
                         "foreground": "#a05500"
                     }
                 },
+                {
+                    "scope": "string.quoted.single.js",
+                    "settings": {
+                        "foreground": "#004caf"
+                    }
+                },
+                {
+                    "scope": "storage.type.js",
+                    "settings": {
+                        "foreground": "#af0000"
+                    }
+                },	
+                {
+                    "scope": "variable.other.constant.js",
+                    "settings": {
+                        "foreground": "#000000"
+                    }
+                },
+                {
+                    "scope": "string.quoted.double.html",
+                    "settings": {
+                        "foreground": "#ad0000"
+                    }
+                },
+                {
+                    "scope": "entity.name.tag.html",
+                    "settings": {
+                        "foreground": "#2000ad"
+                    }
+                },
+                {
+                    "scope": "entity.other.attribute-name.html",
+                    "settings": {
+                        "foreground": "#9000ad"
+                    }
+                },
             ]
         },
         "[*Dark*]": {

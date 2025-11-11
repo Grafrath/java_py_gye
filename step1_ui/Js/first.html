@@ -5,24 +5,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JavaScript</title>
-        <script>
-            // JavaScript 코드는 여기에 작성합니다.
-            console.log("Hello, JavaScript!");
-            // document <body> 태그 안에 내용을 출력
-            document.write("나 너무 피곤해서 죽을거같아...");
-        </script>
     </head>
 
     <body>
+        <label>이름: <input type="text" id="nameInput"></label><br>
+        <label>나이: <input type="number" id="ageInput"></label><br><br>
+        <button onclick="addUser()">추가하기</button>
 
-        <br>
-        <button>버튼</button>
         <script>
-            // 버튼 클릭 시 경고창 출력
-            const button = document.querySelector("button");
-            button.addEventListener("click", function() {
-                alert("버튼이 클릭되었습니다!");
-            });
+            // 사용자 목록
+            let users = [];
+            
+            // 사용자 추가 함수
+            function addUser() {
+                let name = document.querySelector("#nameInput").value;
+                let age = document.querySelector("#ageInput").value;
+                
+                let newuser = {
+                    "name": name,
+                    "age": age
+                };
+                
+                users.push(newuser);
+                
+                console.log("새 사용자 추가됨:", newuser);
+                console.log("현재 users 배열:", users);
+            }
         </script>
 
     </body>

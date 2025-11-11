@@ -1,0 +1,178 @@
+객체
+현실세계에 있는 내용을 디지털로 데이터화 시키는 것
+배열에는 인덱스가 있지만, 객체에는 인덱스가 없다.
+let obj = {
+ key : value, -> property
+ key : value,
+ key : value,
+}
+
+객체의 value는 key를 통해 접근해야 한다.
+console.log(변수명.key) -> 콘솔에 value가 출력
+
+메서드
+객체 안에 정의된 함수
+let obj = {
+ key : value, -> property
+ key : value,
+ key : value,
+ key : function(매개변수){ -> 기본 모양
+      명령작성
+ }
+ key(매개변수){ -> 축약형
+      명령작성
+ }
+}
+
+메서드의 호출
+※ 메서드는 항상 객체를 통해서 호출해야 한다.
+변수명.메서드명(인수);
+
+매개변수
+메서드를 호출할 때 전달하는 값(인수)을 함수 내부로 전달해주는 변수
+
+return 값; -> 메서드 안에서 모든 명령을 수행하고 값을 돌려받는다.
+
+console.log(값) -> 메서드 내부에서 출력하고 끝
+
+함수(function)
+독립적으로 호출이 가능하다.
+
+function 함수명 (매개변수) {  명령문 };
+
+함수명();
+
+let 변수명 = function(매개변수) {  명령문 };
+
+변수명();
+
+let 변수명 = (매개변수) => { 명령문; }
+
+변수명();
+
+함수도 매개변수의 인수로 전달하는 것이 가능합니다.
+
+let arr = [1,2,3,4,5,6]
+
+let newArr = arr.filter( x => x % 2 === 0)
+
+매개변수가 1개면 소괄호 생략 가능
+명령문 부분에서 {}와 return을 함께 생략 가능
+
+JS로 HTML을 조종하는 방법
+1. 조종하기 위해 선택을 해야 한다.
+let tag = document.getElementById("아이디값);
+let tag = document.querySelector("CSS선택자");
+HTML에 작성된 태그에 대한 정보가 JS의 변수에 대입이 된다.
+
+hasAttribute("class") : 해당 속성을 가지고 있는지 검사
+getAttribute(속성) : 해당 속성의 값을 반환
+setAttribute(속성명,값) : 속성과 속성값을 설정한다.
+removeAttribute(속성) : 속성을 제거한다.
+.attributes : 속성들을 모아서 배열로 반환
+ㄴ 태그에서 속성이 많은 경우 배열에 저장해서 인덱스로 관리하면 편하다.
+
+2. 스타일 변경하기
+
+element.style.스타일 속성 = '값'
+스타일 속성은 camel expression으로 쓴다.
+
+element.style.backgroundColor='값';
+element.style.width='값'
+
+element.style.setProperty('속성','값'); 속성을 설정
+element.style.removeProperty('속성'); 속성을 삭제
+
+
+스타일을 줄 때 class를 이용해서 비슷한 스타일을 가지고 있는 태그들을 묶어서 사용
+스타일이 많아지게 되면 JS로 하나씩 변경하는 대신 classList를 이용하자
+
+.active{
+    background-color : pink;
+    transform : scale(1.2);
+}
+
+element.classList.add("active");
+
+setAttribute('속성명','속성값') -> 기존클래스가 있으면 덮어쓰기
+
+<div class="card"></div>
+
+el.setAttribute("class","active"); -> 꼭 클래스에만 해당되는건 아님
+
+<div class="active"></div> -> 원래 있던 card가 사라진다.
+
+el.classList.add("active", "highlight", "scale");
+
+<div class="card active highlight scale"></div> -> 다른 클래스가 추가됨
+
+classList.remove("클래스명") -> 삭제
+classList.toggle("클래스명"); -> 있으면 삭제, 없으면 추가
+classList.contains("클래스명") -> 포함하고 있냐 없냐
+classList.replace("원래 클래스명","새로운 클래스명") -> 클래스명 변경
+
+스타일 개수가 적으면 직접 변경
+스타일 개수가 많으면 클래스에 지정을 해놓고 태그에 부여.
+
+복습한거 보내라고 했는 계속 몇명밖에 안함
+-> 꼭 보내주십시오...
+
+
+
+요구사항
+요구사항이란?
+기능적 요구사항
+비기능 요구사항
+
+프로토타입
+프로토타입의 정의와 목적
+프로토타입 종류와 장단점
+프로토타입 만들 전에 고려사항
+포로토타입 만들 때 고려해야 하는 상황
+UX : User eXperience -> 유저의 경험
+
+화면 설계
+화면설계란?
+목적?
+단계
+주의사항
+
+5문제 -> 20점 (부분점수 있음)
+60점 이상이면 통과
+
+
+input태그는 닫는 태그가 따로 없음
+
+input태그에 들어있는 내용은 value속성에 들어있음
+
+<input id="su1" value="xxx">
+
+let su1 = document.querySelector("#su1").value
+
+이벤트 처리 방식
+
+1. 태그 내부에서 속성으로 해결하는 방법
+<button onclick="기능"></button>
+
+2. addEventListener를 사용하는 방식
+ㄴ 2-1 js에서 태그를 먼저 선택을 하고
+ㄴ 2-2 addEventListenr를 붙여서 이벤트 처리를 한다.
+
+<button id="btn1">버튼</button>
+
+let button = document.querySelector("#btn1");
+
+button.addEventListener("이벤트", 기능)
+
+유효성 검사
+input에 내가 의도한 값만 넣도록 조건을 거는것
+ex) 구구단
+비어있는 값 넣지마라, 2~9만 넣어라
+
+
+
+
+
+
+
+

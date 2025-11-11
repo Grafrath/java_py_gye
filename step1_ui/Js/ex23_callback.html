@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <button id="load">데이터요청</button>
+        <script>
+            console.log('-------------------');
+
+            //Promise는 비동기 작업이 완료되었을 때 성공 또는 실패 결과를 반환하는 객체이다.
+            //Promise의 상태
+            //pending : 대기중
+            //fulfilled : 성공 reolve 호출
+            //rejected : 실패 reject 호출
+            
+            document.querySelector("#load").addEventListener("click", () => {
+                var myPromise = new Promise((resolve, reject) => {
+                    let success = Math.random() > 0.5; //50% 확률
+                    setTimeout( () => {
+                        if (success) {
+                            resolve('데이터 받아옴');
+                        } else {
+                            reject('에러 발생');
+                        }
+
+                    }, 4000) //4초뒤 결과 반환
+                })
+
+                myPromise
+                    .then((succ) => {
+                        console.log(succ)
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+
+            })
+            
+        </script>
+    </body>
+
+</html>

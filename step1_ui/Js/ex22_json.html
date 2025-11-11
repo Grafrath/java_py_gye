@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <script>
+            //json 데이터
+            let student = [
+                {
+                    "name" : "홍길동",
+               
+                    "age" : 20,
+                    "major" : "컴퓨터 공학",
+                    "hobby":["코딩","게임","독서"],
+                    "friends" : [{"name": "김철수", "age":23},
+                    { "name": "김영희", "age": 23 }]
+                }, {
+                    "name": "김철수",
+                    "age": 23,
+                    "major": "경영학과",
+                    "hobby": ["헬스", "수영", "축구"],
+                    "friends": [{ "name": "김박사", "age": 25 },
+                    { "name": "고영희", "age": 23 }]
+                }, {
+                    "name": "박나비",
+                    "age": 22,
+                    "major": "산업디자인",
+                    "hobby": ["그림", "영화", "독서"],
+                    "friends": [{ "name": "김철수", "age": 23 },
+                    { "name": "고영희", "age": 23 }]
+                }
+            ]
+
+            //json 데이터에 접근하여 value 꺼내기
+            //js 객체에 접근하여 값을 꺼내는 방법과 동일
+            console.log(student[0].name);
+            //취미 호출
+            console.log(student[0].hobby[1]);
+            //친구 이름 출력(김영희)
+            console.log(student[0].friends[1].name);
+        </script>
+    </body>
+
+</html>

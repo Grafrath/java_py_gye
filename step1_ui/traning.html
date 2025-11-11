@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이모지 버튼 자동 슬라이드쇼</title>
+    <style>
+        ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            max-width: 400px;
+            max-height: 300px;
+            border-radius: 10px;
+            object-fit: contain;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            font-size: 2rem;
+            background: white;
+            border: none;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+    <script>
+        let list = 1;
+        const MaxList = 7; // 이미지 개수
+        const intervalTime = 3000; // 자동 전환 시간 (3초)
+        let autoSlide = null;
+        let isPlaying = true;
+
+        function chan(op) {
+            const image = document.querySelector("#image");
+
+            if (op === '>') {
+                list++;
+                if (list > MaxList) list = 1; // 마지막 다음 → 처음
+            } else if (op === '<') {
+                list--;
+                if (list < 1) list = MaxList; // 처음 이전 → 마지막
+            }
+
+            image.setAttribute('src', `dog${list}.jpg`);
+        }
+
+        function startAutoSlide() {
+            if (!autoSlide) {
+                autoSlide = setInterval(() => chan('>'), intervalTime);
+            }
+            isPlaying = true;
+            document.querySelector("#toggle").textContent = "⏸️"; // 버튼 모양 변경
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+            autoSlide = null;
+            isPlaying = false;
+            document.querySelector("#toggle").textContent = "▶️"; // 버튼 모양 변경
+        }
+
+        function toggleSlide() {
+            if (isPlaying) {
+                stopAutoSlide();
+            } else {
+                startAutoSlide();
+            }
+        }
+
+        window.onload = () => {
+            startAutoSlide();
+
+            document.querySelector("#undo").addEventListener('click', () => {
+                chan('<');
+                if (isPlaying) {
+                    stopAutoSlide();
+                    startAutoSlide();
+                }
+            });
+
+            document.querySelector("#next").addEventListener('click', () => {
+                chan('>');
+                if (isPlaying) {
+                    stopAutoSlide();
+                    startAutoSlide();
+                }
+            });
+
+            document.querySelector("#toggle").addEventListener('click', toggleSlide);
+        };
+    </script>
+</head>
+
+<body>
+
+    <ul>
+        <li><button class="btn" id="undo">⬅️</button></li>
+        <li><img src="dog1.jpg" id="image" alt="강아지"></li>
+        <li><button class="btn" id="next">➡️</button></li>
+        <li><button class="btn" id="toggle">⏸️</button></li>
+    </ul>
+
+</body>
+
+</html>

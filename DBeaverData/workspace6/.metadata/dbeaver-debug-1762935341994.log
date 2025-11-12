@@ -1,0 +1,257 @@
+2025-11-12 13:00:22.922 - DBeaver 25.2.4.202511021717 is starting
+2025-11-12 13:00:22.923 - OS: Windows 10 10.0 (amd64)
+2025-11-12 13:00:22.923 - Java version: 21.0.8 by Eclipse Adoptium (64bit)
+2025-11-12 13:00:22.923 - Install path: 'C:\Users\admin\AppData\Local\DBeaver'
+2025-11-12 13:00:22.923 - Instance path: 'file:/C:/Users/admin/AppData/Roaming/DBeaverData/workspace6/'
+2025-11-12 13:00:22.925 - Memory available 209Mb/1024Mb
+2025-11-12 13:00:22.926 - Create display
+2025-11-12 13:00:23.024 - Initialize desktop platform...
+2025-11-12 13:00:23.109 - BounceCastle bundle found. Use JCE provider BC
+> Start Core File Systems [org.eclipse.core.filesystem 1.11.300.v20250607-0645]
+> Start Core Resource Management [org.eclipse.core.resources 3.23.0.v20250729-1759]
+> Start 팀 지원 핵심 [org.eclipse.team.core 3.10.800.v20250610-0708]
+> Start DBeaver UI Navigator [org.jkiss.dbeaver.ui.navigator 1.0.166.202511021717]
+Warning: NLS unused message: WorkbenchPreference_reuseEditorsThreshold in: org.eclipse.ui.internal.messages
+Warning: NLS unused message: 이유 in: org.eclipse.ui.internal.messages
+2025-11-12 13:00:23.333 - Initialize base platform...
+2025-11-12 13:00:23.338 - Platform initialized (314ms)
+2025-11-12 13:00:23.369 - Starting instance server at http://localhost:50006
+2025-11-12 13:00:23.369 - Run workbench
+> Start Eclipse e4 작업영역 SWT [org.eclipse.e4.ui.workbench.swt 0.17.900.v20250612-1000]
+> Start Eclipse Application Services [org.eclipse.e4.core.services 2.5.200.v20250326-1945]
+> Start Eclipse UI Application Services [org.eclipse.e4.ui.services 1.6.500.v20250123-0754]
+> Start Eclipse e4 Progress View [org.eclipse.e4.ui.progress 0.4.800.v20250422-1254]
+> Start Eclipse Bindings Support [org.eclipse.e4.ui.bindings 0.14.700.v20250612-1000]
+> Start Eclipse e4 core commands [org.eclipse.e4.core.commands 1.1.600.v20250307-1331]
+> Start EMF XML/XMI Persistence [org.eclipse.emf.ecore.xmi 2.39.0.v20250414-1351]
+> Start Eclipse CSS SWT Theme Support [org.eclipse.e4.ui.css.swt.theme 0.14.500.v20250213-1508]
+> Start Eclipse e4 작업영역 기능 추가 [org.eclipse.e4.ui.workbench.addons.swt 1.5.800.v20250701-0653]
+> Start Eclipse e4 작업영역 SWT 렌더러 [org.eclipse.e4.ui.workbench.renderers.swt 0.16.900.v20250828-1028]
+> Start Eclipse Dependency Injection Extensions [org.eclipse.e4.core.di.extensions 0.18.300.v20240413-1529]
+> Start DBeaver AI Model [org.jkiss.dbeaver.model.ai 2.0.9.202511021717]
+> Start DBeaver AI UI [org.jkiss.dbeaver.ui.ai 1.0.68.202511021717]
+> Start Eclipse CSS SWT Support [org.eclipse.e4.ui.css.swt 0.15.600.v20250409-1135]
+> Start Eclipse SDK Themes [org.eclipse.ui.themes 1.2.2900.v20250806-1940]
+2025-11-12 13:00:24.281 - Configure workbench window
+> Start DBeaver SQL Model [org.jkiss.dbeaver.model.sql 1.0.156.202511021717]
+2025-11-12 13:00:24.355 - Total database drivers: 128 (128)
+> Start 도움말 시스템 코어 [org.eclipse.help 3.10.600.v20250613-0437]
+2025-11-12 13:00:24.396 - Create actions
+> Start 기본 문서 편집기 [org.eclipse.ui.editors 3.20.100.v20250814-1056]
+> Start 텍스트 편집기 프레임워크 [org.eclipse.ui.workbench.texteditor 3.19.300.v20250815-0722]
+2025-11-12 13:00:26.788 - Initialize workbench window
+2025-11-12 13:00:26.797 - Finish initialization
+> Start DBeaver UI Editors - Data [org.jkiss.dbeaver.ui.editors.data 1.0.166.202511021717]
+> Start Equinox Java Authentication and Authorization Service (JAAS) [org.eclipse.equinox.security 1.4.700.v20250622-1644]
+> Start 인터넷 연결 관리 사용자 인터페이스 [org.eclipse.ui.net 1.5.500.v20250611-0855]
+> Start Internet Connection Management [org.eclipse.core.net 1.5.800.v20250613-1119]
+> Start DBeaver UI Editors - SQL [org.jkiss.dbeaver.ui.editors.sql 1.0.166.202511021717]
+> Start DBeaver Dashboard UI [org.jkiss.dbeaver.ui.dashboard 1.0.163.202511021717]
+> Start GEF Classic Draw2d [org.eclipse.draw2d 3.20.100.202508011427]
+> Start GEF Classic GEF (MVC) [org.eclipse.gef 3.23.0.202507261623]
+> Start DBeaver ERD UI [org.jkiss.dbeaver.ui.editors.erd 3.1.7.202511021717]
+> Start DBeaver ERD Model [org.jkiss.dbeaver.model.erd 1.1.7.202511021717]
+> Start DBeaver Sample Database [org.jkiss.dbeaver.ui.config.sample 1.0.203.202511021717]
+> Start DBeaver JDBC Model [org.jkiss.dbeaver.model.jdbc 1.0.59.202511021717]
+> Start DBeaver Generic Plug-in [org.jkiss.dbeaver.ext.generic 2.3.252.202511021717]
+> Start DBeaver SQLite Model [org.jkiss.dbeaver.ext.sqlite 1.0.215.202511021717]
+2025-11-12 13:02:45.772 - Open [https://dbeaver.io/product/version.xml]
+2025-11-12 13:02:53.381 - Open [https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/maven-metadata.xml]
+2025-11-12 13:02:53.456 - Open [https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.51.0.0/sqlite-jdbc-3.51.0.0.pom]
+2025-11-12 13:02:53.529 - Open [https://repo1.maven.org/maven2/org/junit/junit-bom/5.12.2/junit-bom-5.12.2.pom]
+2025-11-12 13:02:59.016 - Connect with 'DBeaver Sample Database (SQLite)' (dbeaver-sample-database-sqlite-1)
+2025-11-12 13:02:59.048 - Execution context opened (DBeaver Sample Database (SQLite); Main; 0)
+2025-11-12 13:03:00.628 - Error creating driver 'SQLite' instance.
+Most likely required jar files are missing.
+You should configure jars in driver settings.
+
+Reason: can't load driver class 'org.sqlite.JDBC'
+org.jkiss.dbeaver.DBException: Error creating driver 'SQLite' instance.
+Most likely required jar files are missing.
+You should configure jars in driver settings.
+
+Reason: can't load driver class 'org.sqlite.JDBC'
+	at org.jkiss.dbeaver.registry.driver.DriverLoaderDescriptor.loadDriver(DriverLoaderDescriptor.java:177)
+	at org.jkiss.dbeaver.registry.driver.DriverLoaderDescriptor.loadDriver(DriverLoaderDescriptor.java:152)
+	at org.jkiss.dbeaver.registry.driver.DriverLoaderDescriptor.getDriverInstance(DriverLoaderDescriptor.java:120)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.getDriverInstance(JDBCDataSource.java:780)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.createDriverInstance(JDBCDataSource.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.openConnection(JDBCDataSource.java:190)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.openConnection(JDBCDataSource.java:133)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.openConnection(GenericDataSource.java:158)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:124)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:106)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:125)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.<init>(GenericDataSource.java:124)
+	at org.jkiss.dbeaver.ext.sqlite.model.SQLiteDataSource.<init>(SQLiteDataSource.java:49)
+	at org.jkiss.dbeaver.ext.sqlite.model.SQLiteMetaModel.createDataSourceImpl(SQLiteMetaModel.java:223)
+	at org.jkiss.dbeaver.ext.generic.GenericDataSourceProvider.openDataSource(GenericDataSourceProvider.java:58)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1355)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1213)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:1061)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.runSync(ConnectJob.java:104)
+	at org.jkiss.dbeaver.ui.actions.datasource.DataSourceHandler.connectToDataSource(DataSourceHandler.java:123)
+	at org.jkiss.dbeaver.ui.actions.datasource.UIServiceConnectionsImpl.initConnection(UIServiceConnectionsImpl.java:87)
+	at org.jkiss.dbeaver.model.DBUtils.initDataSource(DBUtils.java:2469)
+	at org.jkiss.dbeaver.model.navigator.DBNDataSource.initializeNode(DBNDataSource.java:167)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.getChildren(DBNDatabaseNode.java:218)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.getChildren(DBNDatabaseNode.java:1)
+	at org.jkiss.dbeaver.model.navigator.DBNUtils.getNodeChildrenFiltered(DBNUtils.java:110)
+	at org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService.evaluate(TreeLoadService.java:50)
+	at org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService.evaluate(TreeLoadService.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ClassNotFoundException: org.sqlite.JDBC
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.jkiss.dbeaver.registry.driver.DriverLoaderDescriptor.loadDriver(DriverLoaderDescriptor.java:175)
+	... 32 more
+> Start DBeaver MySQL UI Support [org.jkiss.dbeaver.ext.mysql.ui 1.0.158.202511021717]
+> Start DBeaver MySQL Support [org.jkiss.dbeaver.ext.mysql 2.1.251.202511021717]
+2025-11-12 13:03:39.588 - Service 'org.jkiss.dbeaver.ui.UIServiceConnectionEditor' not found
+2025-11-12 13:03:39.618 - Service 'org.jkiss.dbeaver.runtime.ui.UIServiceSecurity' not found
+2025-11-12 13:04:03.414 - Open [https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.2.0/mysql-connector-j-8.2.0.pom]
+2025-11-12 13:04:03.496 - Open [https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.pom]
+2025-11-12 13:04:03.527 - Open [https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.21.9/protobuf-parent-3.21.9.pom]
+2025-11-12 13:04:03.576 - Open [https://repo1.maven.org/maven2/com/google/protobuf/protobuf-bom/3.21.9/protobuf-bom-3.21.9.pom]
+2025-11-12 13:04:05.066 - Open [https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.2.0/mysql-connector-j-8.2.0.jar]
+2025-11-12 13:04:05.158 - Open [https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar]
+2025-11-12 13:04:05.240 - Connect with 'localhost' (mysql8-19a763c207c-24b558ce9c086909)
+2025-11-12 13:04:05.246 - Execution context opened (localhost; Main; 1)
+> Start DBeaver GIS Support [org.jkiss.dbeaver.data.gis 1.0.190.202511021717]
+2025-11-12 13:04:05.403 - Connected (mysql8-19a763c207c-24b558ce9c086909, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
+2025-11-12 13:04:05.416 - Execution context closed (localhost, 1)
+2025-11-12 13:04:05.417 - Disconnected (mysql8-19a763c207c-24b558ce9c086909)
+2025-11-12 13:04:41.434 - Connect with 'localhost' (mysql8-19a763bc3ad-42b246d73a3ffce1)
+2025-11-12 13:04:41.436 - Execution context opened (localhost; Main; 2)
+2025-11-12 13:04:41.442 - Execution context opened (localhost; Metadata; 3)
+2025-11-12 13:04:41.456 - Connected (mysql8-19a763bc3ad-42b246d73a3ffce1, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
+> Start Data Transfer UI [org.jkiss.dbeaver.data.transfer.ui 1.0.150.202511021717]
+2025-11-12 13:04:48.633 - Service 'org.jkiss.dbeaver.ui.UIServiceConnectionEditor' not found
+2025-11-12 13:04:48.633 - Service 'org.jkiss.dbeaver.runtime.ui.UIServiceSecurity' not found
+2025-11-12 13:06:16.312 - Connect with 'localhost' (mysql8-19a763e27e6-598e054c5a1842a4)
+2025-11-12 13:06:16.313 - Execution context opened (localhost; Main; 4)
+2025-11-12 13:06:16.327 - Connected (mysql8-19a763e27e6-598e054c5a1842a4, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
+2025-11-12 13:06:16.339 - Execution context closed (localhost, 4)
+2025-11-12 13:06:16.339 - Disconnected (mysql8-19a763e27e6-598e054c5a1842a4)
+2025-11-12 13:06:20.769 - Execution context closed (localhost, 2)
+2025-11-12 13:06:20.780 - Execution context closed (localhost, 3)
+2025-11-12 13:06:20.780 - Disconnected (mysql8-19a763bc3ad-42b246d73a3ffce1)
+2025-11-12 13:06:20.780 - Connect with 'localhost' (mysql8-19a763bc3ad-42b246d73a3ffce1)
+2025-11-12 13:06:20.781 - Execution context opened (localhost; Main; 5)
+2025-11-12 13:06:20.784 - Execution context opened (localhost; Metadata; 6)
+2025-11-12 13:06:20.797 - Connected (mysql8-19a763bc3ad-42b246d73a3ffce1, MySQL Connector/J [mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)])
+2025-11-12 13:46:58.298 - Application goes into sleep mode
+2025-11-12 14:31:53.864 - Application wakes
+Warning: NLS unused message: FindReplace_RegExCheckbox_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_WrapCheckBox_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_IncrementalCheckBox_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_Options in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_ReplaceSelectionButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_SelectedRangeRadioButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_SelectAllButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_GlobalRadioButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_WholeWordCheckBox_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_ReplaceFindButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_BackwardRadioButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_CloseButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_Replace_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_CaseCheckBox_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_Status_replacements_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_title in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_Direction in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_ReplaceAllButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_Scope in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_Find_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_ForwardRadioButton_label in: org.eclipse.ui.texteditor.EditorMessages
+Warning: NLS unused message: FindReplace_FindNextButton_label in: org.eclipse.ui.texteditor.EditorMessages
+> Start DBeaver SQL Terminal [org.jkiss.dbeaver.ui.editors.sql.terminal 1.0.142.202511021717]
+> Start 핵심 비교 지원 [org.eclipse.compare.core 3.8.800.v20250718-1505]
+> Start 콘솔 [org.eclipse.ui.console 3.14.400.v20250607-0653]
+> Start 디버그 핵심 [org.eclipse.debug.core 3.23.100.v20250811-0711]
+2025-11-12 14:34:09.602 - Execution context opened (localhost; SQLEditor <Script.sql>; 7)
+> Start DBeaver Tasks - Native Tools UI [org.jkiss.dbeaver.tasks.native.ui 1.0.144.202511021717]
+> Start DBeaver Tasks - General UI [org.jkiss.dbeaver.tasks.ui 1.0.144.202511021717]
+> Start DBeaver Data Transfer [org.jkiss.dbeaver.data.transfer 2.0.150.202511021717]
+2025-11-12 14:46:32.959 - Can't get column 'password': Column 'password' not found.
+> Start DBeaver Tasks View [org.jkiss.dbeaver.tasks.ui.view 1.0.115.202511021717]
+2025-11-12 14:48:23.944 - Delete empty SQL script '\General\Scripts\Script.sql'
+2025-11-12 14:48:23.951 - Execution context closed (localhost, 7)
+2025-11-12 14:48:29.273 - Execution context opened (localhost; SQLEditor <Script.sql>; 8)
+> Start DBeaver SQL Language Semantic Model [org.jkiss.dbeaver.model.lsm 1.0.61.202511021717]
+2025-11-12 16:22:31.033 - Execution context closed (localhost, 8)
+2025-11-12 16:22:42.215 - Execution context opened (localhost; SQLEditor <Script.sql>; 9)
+2025-11-12 16:24:16.209 - Error dissociating problem marker
+org.eclipse.core.internal.resources.ResourceException(/General/Scripts/Script.sql)[376]: java.lang.IllegalStateException
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:71)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:274)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLEditorSemanticMarkersManager.updateMarkers(SQLEditorSemanticMarkersManager.java:168)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLEditorSemanticMarkersManager$3.runInUIThread(SQLEditorSemanticMarkersManager.java:86)
+	at org.jkiss.dbeaver.ui.AbstractUIJob.runInUIThread(AbstractUIJob.java:41)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:148)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4135)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3751)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication.start(DBeaverApplication.java:308)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.invokeFramework(DBeaverLauncher.java:905)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.basicRun(DBeaverLauncher.java:658)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.run(DBeaverLauncher.java:1674)
+2025-11-12 16:24:24.405 - Error dissociating problem marker
+org.eclipse.core.internal.resources.ResourceException(/General/Scripts/Script.sql)[376]: java.lang.IllegalStateException
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:71)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:274)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLEditorSemanticMarkersManager.updateMarkers(SQLEditorSemanticMarkersManager.java:168)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLEditorSemanticMarkersManager$3.runInUIThread(SQLEditorSemanticMarkersManager.java:86)
+	at org.jkiss.dbeaver.ui.AbstractUIJob.runInUIThread(AbstractUIJob.java:41)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:148)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4135)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3751)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication.start(DBeaverApplication.java:308)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.invokeFramework(DBeaverLauncher.java:905)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.basicRun(DBeaverLauncher.java:658)
+	at org.jkiss.dbeaver.launcher.DBeaverLauncher.run(DBeaverLauncher.java:1674)
+2025-11-12 17:15:35.876 - Execution context closed (localhost, 9)
+2025-11-12 17:15:35.943 - Dispose navigator model
+2025-11-12 17:15:35.961 - DBeaver is stopping
+2025-11-12 17:15:35.962 - Stop instance server
+2025-11-12 17:15:36.975 - DBeaver shutdown completed

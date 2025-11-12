@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <button id="call">호출</button> <!-- 버튼을 클릭하면 데이터를 가져오도록 한다 -->
+        <p id="adv"></p> <!-- 가져온 데이터를 출력 -->
+        <script>
+            const button = document.getElementById('call'); //id가 imgCall인 버튼 요소를 가져와서 button 변수에 저장
+            const advice = document.getElementById('adv'); //id가 dog인 <img> 요소를 가져와서 image 변수에 저장
+
+            button.addEventListener('click', async () => { //버튼 클릭시 작동하는 이벤트
+                try {
+                    const response = await fetch('https://api.adviceslip.com/advice');
+                    if (!response.ok) throw new Error('에러가 발생했습니다.');
+                    const data = await response.json();
+                    advice.innerText = data.slip.advice;
+                } catch(error) {
+                    console.error('불러오기 실패:', error);
+                }
+            })
+        </script>
+    </body>
+
+</html>

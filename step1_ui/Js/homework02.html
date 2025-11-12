@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>GitHub 사용자 검색기 (Fetch 복습)</title>
+        <style>
+            body {
+                font-family: 'Pretendard', sans-serif;
+                background: #f7f9fc;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+            }
+            
+            input, button {
+                padding: 10px;
+                font-size: 16px;
+                margin: 5px;
+            }
+        
+            .card {
+                margin-top: 20px;
+                padding: 20px;
+                border-radius: 12px;
+                background: white;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 280px;
+            }
+        
+            img {
+                width: 120px;
+                border-radius: 50%;
+            }
+        
+            .error {
+                color: red;
+                margin-top: 15px;
+            }
+
+            .search-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                margin: 8px 0;
+                font-size: 15px;
+            }
+
+            .repo-link {
+                text-decoration: none;
+                color: #0070f3;
+                font-weight: 500;
+            }
+
+            .repo-link:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!-- 사용자 입력 영역 -->
+        <h1>GitHub 사용자 검색기</h1>
+        <div class="search-container">
+            <!-- 아이디 입력 -->
+            <input type="text" id="username" placeholder="GitHub 아이디를 입력하세요">
+            <!-- 버튼 클릭 시 검색 -->
+            <button id="search">검색</button>
+        </div>
+        
+        <!-- 결과가 표시될 영역 -->
+        <div id="result"></div>
+        <script>
+            /*
+            학습 목표
+            - fetch()를 이용한 비동기 통신 이해
+            - JSON 데이터를 DOM 요소로 가공해서 화면에 출력하기
+            - 예외 처리(try ~ catch)로 에러 상황을 처리하는 방법 배우기
+            */
+
+            const input = document.getElementById('username');
+            const button = document.getElementById('search');
+            const result = document.getElementById('result');
+
+            // 엔터키로도 검색 가능하도록 추가
+            input.addEventListener('keypress', e => { if (event.key === 'Enter') button.click(); });
+
+            // 버튼 클릭 시 fetch로 GitHub 사용자 정보 불러오기
+            button.addEventListener('click', async () => {
+                const username  = input.value.trim(); // 입력값 가져오기
+                if (!username) {
+                    alert('아이디를 입력해주세요.');
+                    return;
+                }
+
+                result.innerHTML = ''; // 이전 검색 결과 초기화
+
+                try {
+                    // 사용자 기본 정보 가져오기
+                    const response = await fetch(`https://api.github.com/users/${username}`);
+
+                    if (!response.ok) throw new Error('사용자를 찾을 수 없습니다.');
+                    const data = await response.json(); // 응답 데이터를 JSON 형태로 변환
+
+                    // 사용자의 저장소 정보 5개 불러오기
+                    const repoResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
+                    const repos = await repoResponse.json();
+
+                    // 저장소 목록 구성
+                    let repoListHTML = '';
+                    if (repos.length > 0) {
+                        repoListHTML =
+                        `<h3>📂 최근 저장소 (5개)</h3><ul> ${repos.map(repo => `<li>
+                        <a class="repo-link" href="${repo.html_url}" target="_blank">${repo.name}</a>
+                        ⭐ ${repo.stargazers_count}</li>`).join('')} </ul>`;
+                    } else {
+                        repoListHTML = `<p>저장소가 없습니다.</p>`;
+                    }
+
+                    // 화면에 최종 결과 출력
+                    result.innerHTML = `
+                    <div class="card">
+                    <img src="${data.avatar_url}" alt="avatar" />
+                    <h2>${data.name || '이름 없음'}</h2>
+                    <p>팔로워: ${data.followers}</p>
+                    <p>저장소: ${data.public_repos}</p>
+                    <a href="${data.html_url}" target="_blank">프로필 보기</a>
+                    <hr>${repoListHTML}
+                    </div>`;
+                } catch (error) {
+                    // 에러 메시지 표시
+                    result.innerHTML = `<p class='error'>❌ ${error.message}</p>`;
+                }      
+            });      
+        </script>
+    </body>
+    
+</html>

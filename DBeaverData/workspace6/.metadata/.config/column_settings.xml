@@ -12,4 +12,10 @@
 		<column name="SQL Path" visible="true" order="3" width="100"/>
 		<column name="Database size" visible="true" order="4" width="100"/>
 	</item>
+	<item id="scriptSelectorViewer">
+		<column name="Script" visible="true" order="0" width="137"/>
+		<column name="Time" visible="true" order="1" width="197"/>
+		<column name="Info" visible="true" order="2" width="82"/>
+		<column name="Folder" visible="true" order="3" width="94"/>
+	</item>
 </items>

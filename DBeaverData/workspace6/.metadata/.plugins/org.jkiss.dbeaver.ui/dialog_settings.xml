@@ -1,52 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="DBeaver.StandardErrorDialog">
-		<item key="showDetails" value="false"/>
-		<item key="DIALOG_X_ORIGIN" value="529"/>
-		<item key="DIALOG_Y_ORIGIN" value="307"/>
-	</section>
-	<section name="DBeaver.DriverTabbedViewer">
-		<item key="folder" value="sql"/>
-	</section>
-	<section name="DBeaver.ActiveWizardDialog.NewConnectionWizard">
-		<item key="DIALOG_X_ORIGIN" value="250"/>
-		<item key="DIALOG_Y_ORIGIN" value="38"/>
-		<item key="DIALOG_WIDTH" value="940"/>
-		<item key="DIALOG_HEIGHT" value="566"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
-	</section>
-	<section name="DBeaver.EditConnectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="318"/>
-		<item key="DIALOG_Y_ORIGIN" value="99"/>
-		<item key="DIALOG_WIDTH" value="700"/>
-		<item key="DIALOG_HEIGHT" value="534"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
-	</section>
 	<section name="DBeaver.QM.LogViewer">
 	</section>
 	<section name="ResultSetViewer">
 		<section name="presentations">
-			<section name="spreadsheet">
-				<item key="enabledPanelIds" value="value-view"/>
-				<item key="activePanelId" value="value-view"/>
-				<item key="panelRatio" value="300"/>
-				<item key="panelsVisible" value="true"/>
-				<item key="verticalLayout" value="false"/>
-			</section>
 		</section>
-	</section>
-	<section name="DBeaver.SelectDataSourceDialog">
-		<item key="DIALOG_X_ORIGIN" value="576"/>
-		<item key="DIALOG_Y_ORIGIN" value="-52"/>
-		<item key="DIALOG_WIDTH" value="289"/>
-		<item key="DIALOG_HEIGHT" value="687"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
-	</section>
-	<section name="DBeaver.TransactionLogDialog">
-		<item key="DIALOG_X_ORIGIN" value="231"/>
-		<item key="DIALOG_Y_ORIGIN" value="217"/>
-		<item key="DIALOG_WIDTH" value="979"/>
-		<item key="DIALOG_HEIGHT" value="282"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>

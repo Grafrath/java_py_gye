@@ -91,3 +91,7 @@ Warning: NLS unused message: FindReplace_FindNextButton_label in: org.eclipse.ui
 2025-11-12 17:15:46.428 - Execution context opened (localhost; SQLEditor <Script.sql>; 2)
 > Start DBeaver SQL Language Semantic Model [org.jkiss.dbeaver.model.lsm 1.0.61.202511021717]
 > Start DBeaver Data Transfer [org.jkiss.dbeaver.data.transfer 2.0.150.202511021717]
+2025-11-12 18:21:34.219 - Dispose navigator model
+2025-11-12 18:21:34.249 - DBeaver is stopping
+2025-11-12 18:21:34.251 - Stop instance server
+2025-11-12 18:21:35.263 - DBeaver shutdown completed

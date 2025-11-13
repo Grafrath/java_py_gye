@@ -1,0 +1,5 @@
+create table Flower (
+	f_name varchar(100) UNIQUE NOT null primary key,
+	f_color varchar(10) NOT NULL,
+	price int NOT NULL
+)

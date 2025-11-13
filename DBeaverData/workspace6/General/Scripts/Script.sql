@@ -81,3 +81,15 @@ ALTER TABLE TBL_ANIMAL add PRIMARY key (id);
 
 drop table tbl_animal ;
 
+
+USE academy_db;
+
+CREATE TABLE TBL_STUDENT (
+	id int primary key,
+	name varchar(100),
+	major varchar(100),
+	gender char(1) not null default 'W',
+	birth date,
+	constraint ban_char check (gender in ('M','W')),
+	constraint ban_date check (birth >= '1980-01-01')	
+);

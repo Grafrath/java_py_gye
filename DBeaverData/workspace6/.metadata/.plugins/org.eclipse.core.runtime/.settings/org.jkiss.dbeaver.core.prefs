@@ -4,4 +4,5 @@ org.jkiss.dbeaver.core.confirm.drop_sql=always
 org.jkiss.dbeaver.core.confirm.exit=always
 sample.database.canceled=true
 tipOfTheDayInitializer.notFirstRun=true
-ui.auto.update.check.time=1763340154605
+ui.auto.update.check.time=1763426644741
+ui.show.tip.of.the.day.on.startup=false
